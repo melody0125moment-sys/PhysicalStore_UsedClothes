@@ -1,0 +1,795 @@
+/* リセットCSS（余白の調整） */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* ヘッダー全体（画面上部に固定） */
+.header {
+    position: fixed; /* スクロールしても上に固定 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1936; /* Figmaのダークネイビー色 */
+    color: #ffffff;
+    z-index: 1000; /* 常に一番手前に表示 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ヘッダーの中身（左右振り分け） */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between; /* ロゴを左、アイコンを右に配置 */
+    align-items: center;
+}
+
+/* ロゴデザイン */
+.logo a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Ledger', serif; /* セリフ体でシックな雰囲気に */
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+/* 右側アイコンエリア */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* アイコン同士の間隔 */
+}
+
+.icon-item {
+    color: #ffffff;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: 11px;
+}
+
+.icon-item .icon {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+/* カートの数字バッジ */
+.cart-item {
+    position: relative;
+}
+
+/* カートアイコンだけ大きく */
+.cart-icon {
+    font-size: 24px;
+}
+
+.badge {
+    position: absolute;
+    top: -2px;
+    right: 4px;
+    background-color: #cccccc;
+    color: #1a1936;
+    border-radius: 50%;
+    padding: 1px 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* メインビジュアル（ヒーローセクション） */
+.hero {
+    margin-top: 55px; /* ヘッダーの高さ分、上をあける */
+    height: 80vh; /* 画面高さの約80%の高さにする */
+    background-image: url('images/hero-bg.jpg'); /* さっき保存した画像パス */
+    background-size: cover; /* 画面いっぱいに綺麗に広げる */
+    background-position: center; /* 画像の中心を表示 */
+    position: relative;
+}
+
+/* 画像の上に薄い暗い膜を重ねて文字を見やすくする（オーバーレイ） */
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 黒色を50%透過 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* テキストエリア */
+.hero-content {
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+/* THRIFT タイトル */
+.hero-title {
+    font-family: 'Ledger', serif;
+    font-size: 64px;
+    font-weight: normal;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+}
+
+/* キャッチコピー */
+.hero-subtitle {
+    font-family: serif; /* セリフ体 */
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* お知らせセクション全体 */
+.news-section {
+    background-color: #e8e8e0; /* 背景の生成り／薄いグレージュ色 */
+    padding: 60px 20px;
+}
+
+/* 中央寄せ用コンテナ */
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* 内側のグレーボックス */
+.news-box {
+    background-color: #dcdfe6; /* 内側の薄いグレー */
+    width: 100%;
+    max-width: 600px;
+    padding: 24px 32px;
+    border-radius: 8px; 
+    text-align: center;
+}
+
+/* 「ℹ お知らせ」ヘッダー */
+.news-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #564F65;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-icon {
+    font-size: 16px;
+}
+
+/* お知らせリスト */
+.news-list {
+    list-style: none;
+}
+
+.news-list li a {
+    color: #564F65;
+    text-decoration: underline; /* 下線あり */
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.news-list li a:hover {
+    opacity: 0.7; /* ホバー時に少し透明にする */
+}
+
+/* コンセプトバナーセクション全体 */
+.concept-banner {
+    background-color: #e8e8e0; /* 背景の生成り色（お知らせと合わせる） */
+    padding: 20px 20px 60px; /* 上・左右・下の余白 */
+}
+
+/* 幅の制限と中央寄せ */
+.concept-banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* バナー本体（リンクエリア） */
+.concept-banner-link {
+    display: block;
+    text-decoration: none;
+    height: 240px; /* バナーの高さ（お好みで調整できます） */
+    background-image: url('images/about-bg.jpg'); /* 保存した画像 */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden; /* 角丸からはみ出ないようにする */
+}
+
+/* コンセプトバナーセクション全体 */
+.concept-banner {
+    background-color: #e8e8e0; /* 背景の生成り色 */
+    padding: 0;
+    width: 100%;
+}
+
+/* ヒーローエリアと同じ最大幅（1200px）にして中央寄せ */
+.concept-banner-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* バナー本体 */
+.concept-banner-link {
+    display: block;
+    text-decoration: none;
+    height: 180px; /* バナーの高さ */
+    background-image: url('images/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 0;
+}
+
+/* 暗い膜（オーバーレイ） */
+.concept-banner-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* ホバー時の演出 */
+.concept-banner-link:hover .concept-banner-overlay {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* 「THRIFTについて」タイトル文字 */
+.concept-banner-title {
+    color: #ffffff;
+    font-family: 'Ledger', serif;
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+/* ピックアップセクション全体 */
+.pickup-section {
+    background-color: #e8e8e0; /* 背景の生成り色 */
+    padding: 40px 20px 60px;
+}
+
+/* 中央寄せコンテナ */
+.pickup-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* タイトルエリア */
+.pickup-header {
+    margin-bottom: 24px;
+}
+
+.pickup-title {
+    font-size: 22px;
+    font-family: serif;
+    color: #564F65; /* 指定したカラー */
+    font-weight: normal;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+/* 英語サブタイトル（筆記体／セリフ体） */
+.pickup-subtitle {
+    font-family: 'MonteCarlo', cursive;
+    font-style: italic;
+    font-size: 20px;
+    color: #7a7585;
+}
+
+/* 4列横並びのレイアウト */
+.pickup-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 均等に4列 */
+    gap: 20px; /* 画像同士の間隔 */
+    margin-bottom: 30px;
+}
+
+/* バナーカード */
+.pickup-card {
+    display: block;
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.pickup-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 枠いっぱいに綺麗に表示 */
+    display: block;
+}
+
+/* ホバー時にほんのり拡大 */
+.pickup-card:hover {
+    transform: translateY(-5px); /* 少し上に浮き上がる */
+    opacity: 0.8;
+}
+
+/* 「→もっと見る」リンク */
+.pickup-more {
+    text-align: left;
+}
+
+.pickup-more a {
+    color: #564F65;
+    text-decoration: underline;
+    font-size: 15px;
+    transition: opacity 0.2s;
+}
+
+.pickup-more a:hover {
+    opacity: 0.7;
+}
+
+/* 新着商品セクション全体 */
+.products-section {
+    background-color: #e8e8e0;
+    padding: 40px 20px 60px;
+}
+
+.products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* セクションタイトル */
+.products-header {
+    margin-bottom: 24px;
+}
+
+.products-title {
+    font-family: serif;
+    font-size: 22px;
+    color: #564F65;
+    font-weight: normal;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.products-subtitle {
+    font-family: 'MonteCarlo', cursive;
+    font-size: 20px;
+    color: #7a7585;
+    font-weight: normal;
+}
+
+/* 5列均等グリッド */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+/* 商品カード */
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 商品画像エリア */
+.product-image-link {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 正方形に揃える */
+    overflow: hidden;
+    margin-bottom: 12px;
+    background-color: #f0f0f0;
+}
+
+.product-image-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-image-link:hover img {
+    transform: scale(1.05); /* ホバー時にほんのりズーム */
+}
+
+/* 商品情報テキストエリア */
+.product-info {
+    font-size: 13px;
+    color: #564F65;
+    line-height: 1.5;
+}
+
+/* 価格 */
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #564F65;
+}
+
+.product-price .currency {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* 税込価格 */
+.product-tax {
+    font-size: 11px;
+    color: #888888;
+    margin-bottom: 4px;
+}
+
+/* ブランド名・サイズ・コンディション */
+.product-brand,
+.product-size,
+.product-condition {
+    color: #666666;
+    font-size: 12px;
+}
+
+.product-condition {
+    margin-bottom: 10px;
+}
+
+/* お気に入りボタン */
+.fav-button {
+    width: 85%;
+    margin: 6px auto 0;
+    padding: 8px 4px;
+    background-color: #dcd7d4; /* 薄いベージュグレーのボタン */
+    border: none;
+    border-radius: 4px;
+    color: #7D5260;
+    font-size: 11px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.fav-button:hover {
+    background-color: #c8bebb;
+}
+
+/* ハートアイコン（微調整して文字と揃える） */
+.fav-button i {
+    font-size: 11px;
+    color: #7D5260;
+    transform: translateY(1px); /* ハートを1pxだけ下げる */
+}
+
+/* 「→もっと見る」リンク */
+.products-more {
+    text-align: left;
+}
+
+.products-more a {
+    color: #564F65;
+    text-decoration: underline;
+    font-size: 15px;
+    transition: opacity 0.2s;
+}
+
+.products-more a:hover {
+    opacity: 0.7;
+}
+
+/* 3連バナーセクション全体 */
+.info-banners-section {
+    background-color: #e8e8e0;
+    padding: 0 0 60px 0;
+    width: 100%;
+}
+
+/* 3つを横並びにするコンテナ */
+.info-banners-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 均等に3列 */
+    gap:0; /* バナー同士の間隔 */
+}
+
+/* 個別のバナーリンク */
+.info-banner-link {
+    display: block;
+    text-decoration: none;
+    height: 200px; /* バナーの高さ（お好みで調整可） */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+/* 薄暗い膜（オーバーレイ） */
+.info-banner-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* ご希望の薄暗い膜 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* ホバー時に少し明るくする演出 */
+.info-banner-link:hover .info-banner-overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* バナーの文字 */
+.info-banner-text {
+    color: #ffffff;
+    font-family: serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+/* ブランド情報テキストエリア */
+.brand-info {
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* 英語ブランド名 */
+.brand-name-en {
+    font-family: serif;
+    font-size: 15px;
+    color: #564F65;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+/* 日本語ブランド名 */
+.brand-name-ja {
+    font-size: 12px;
+    color: #7a7585;
+    font-family: serif;
+}
+
+/* スタイリング例セクション全体 */
+.styling-section {
+    background-color: #e8e8e0;
+    padding: 0 0 60px 0;
+    width: 100%;
+}
+
+/* 中央寄せコンテナ */
+.styling-container {
+    max-width: 100%;
+    margin: 0;
+}
+
+/* 2枚横並び（隙間なし） */
+.styling-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0; /* 画像同士の隙間をゼロに */
+    margin-bottom: 20px;
+}
+
+.styling-card {
+    height: 320px; /* 画像の高さ（お好みで 280px〜360px で調整可） */
+    overflow: hidden;
+}
+
+.styling-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 枠いっぱいに綺麗にトリミング表示 */
+    display: block;
+}
+
+/* 「→スタイリング例を見る」リンク */
+.styling-more {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.styling-more a {
+    color: #564F65;
+    text-decoration: underline;
+    font-size: 15px;
+    transition: opacity 0.2s;
+}
+
+.styling-more a:hover {
+    opacity: 0.7;
+}
+
+/* SNSセクション全体 */
+.sns-section {
+    background-color: #e8e8e0;
+    padding: 0 0 60px 0; /* 左右の余白をゼロに */
+    width: 100%;
+    padding: 0;
+}
+
+/* 2列並び（コンテナ） */
+.sns-container {
+    max-width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+/* SNSカード */
+.sns-card {
+    display: block;
+    text-decoration: none;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+/* 全体の薄暗いオーバーレイ */
+.sns-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.sns-card:hover .sns-overlay {
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+/* 中央の半透明ホワイト（ライトグレー）ボックス */
+.sns-box {
+    background-color: rgba(230, 230, 230, 0.75); /* 半透明の薄いグレーボックス */
+    width: 100%;
+    max-width: 680px;
+    height: 100%;
+    padding: 20px 35px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* 左側：アイコン＆アカウント名 */
+.sns-box-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+}
+
+.sns-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 6px;
+}
+
+.line-icon {
+    width: 72px; /* ★Instagramアイコン(64px)と視覚的な大きさが揃うように大きめ指定 */
+    height: 72px;
+}
+
+.sns-account {
+    font-size: 12px;
+    font-family: serif;
+    color: #564F65;
+}
+
+/* 右側：タイトル＆説明文 */
+.sns-box-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.sns-title {
+    font-size: 16px;
+    font-family: serif;
+    color: #564F65;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #564F65;/* タイトル下線 */
+    width: 100%;
+    text-align: center; /* ★文字を線の中央に配置 */
+}
+
+
+
+.sns-desc {
+    font-size: 12px;
+    font-family: serif;
+    color: #564F65;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    text-align: center;
+    width: 100%;
+}
+
+/* フッター全体 */
+.site-footer {
+    /* 直前のセクションの背景色（#e8e8e0）から、フッターの濃い色（#1a1936）へ滑らかにグラデーションさせます */
+    background: linear-gradient(to bottom, #e8e8e0 0%, #1a1936 150px);
+    background-color: #1a1936;
+    color: #ffffff;
+    padding: 250px 80px 100px 80px; /* 上部のパディングを大きくとって、文字を下の濃いエリアに配置 */
+    width: 100%;
+    margin-top: 0;
+}
+
+/* フッター内のレイアウト */
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 左側：ブランドロゴ */
+.footer-brand a {
+    font-family: 'Ledger', serif;
+    font-size: 42px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+/* 右側：リンクメニュー全体のブロック */
+.footer-links {
+    margin-right: 40px;
+}
+
+.footer-menu {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 24px 60px; /* 行間・列間をゆったり取る */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: serif;
+    font-size: 17px; /* ★文字サイズをさらに大きくして読みやすく */
+    letter-spacing: 0.8px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-menu li a:hover {
+    opacity: 0.7;
+}
