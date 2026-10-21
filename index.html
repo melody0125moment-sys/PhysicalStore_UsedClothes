@@ -21,39 +21,10 @@
 </head>
 
 <body>
-    <!-- ヘッダー / ナブバー -->
-    <header class="header">
-        <div class="header-container">
-            <!-- 左側：ブランドロゴ -->
-            <h1 class="logo">
-                <a href="index.html">THRIFT</a>
-            </h1>
 
-            <!-- 右側：アイコン＆アクションエリア -->
-            <div class="header-icons">
-                <a href="#" class="icon-item">
-                    <i class="fa-solid fa-magnifying-glass icon"></i>
-                    <span class="label">絞込検索</span>
-                </a>
-                <a href="#" class="icon-item">
-                    <i class="fa-regular fa-heart icon"></i>
-                    <span class="label">お気に入り</span>
-                </a>
-                <a href="#" class="icon-item cart-item">
-                    <!-- カートアイコンだけ大きさ変えるためにクラス付け -->
-                    <i class="fa-solid fa-cart-shopping icon cart-icon"></i>
-                    <span class="badge">0</span>
-                    <span class="label">カート</span>
-                </a>
-                <button type="button" class="icon-item menu-btn">
-                    <i class="fa-solid fa-bars icon"></i>
-                    <span class="label">メニュー</span>
-                </button>
-            </div>
-        </div>
-    </header>
+    <!-- 共通ヘッダー読み込みエリア -->
+    <div id="header-placeholder"></div>
 
-    <!-- スクロール確認用の仮コンテンツ（後で書き換えます） -->
     <!-- メインビジュアル -->
     <main class="hero">
         <div class="hero-overlay">
@@ -74,7 +45,7 @@
                 </div>
                 <ul class="news-list">
                     <li>
-                        ・ <a href="#">GW期間中の配送について</a>
+                        ・ <a href="#">GW期間中の営業について</a>
                     </li>
                 </ul>
             </div>
@@ -131,7 +102,7 @@
             <!-- セクションタイトル -->
             <div class="products-header">
                 <h2 class="products-title">
-                    新着商品 <span class="products-subtitle">New Arrivals</span>
+                    新着入荷商品 <span class="products-subtitle">New Arrivals</span>
                 </h2>
             </div>
 
@@ -149,9 +120,6 @@
                         <div class="product-brand">Harley-Davidson</div>
                         <div class="product-size">メンズS</div>
                         <div class="product-condition">コンディションA</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
                     </div>
                 </div>
 
@@ -166,9 +134,6 @@
                         <div class="product-brand">Ralph Lauren</div>
                         <div class="product-size">メンズXL</div>
                         <div class="product-condition">コンディションB</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
                     </div>
                 </div>
 
@@ -183,9 +148,6 @@
                         <div class="product-brand">Carhartt</div>
                         <div class="product-size">レディースL</div>
                         <div class="product-condition">コンディションA</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
                     </div>
                 </div>
 
@@ -200,9 +162,6 @@
                         <div class="product-brand">Columbia</div>
                         <div class="product-size">メンズXL</div>
                         <div class="product-condition">コンディションC</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
                     </div>
                 </div>
 
@@ -217,9 +176,6 @@
                         <div class="product-brand">LACOSTE</div>
                         <div class="product-size">レディースM</div>
                         <div class="product-condition">コンディションB</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
                     </div>
                 </div>
 
@@ -232,116 +188,16 @@
         </div>
     </section>
 
-    <!-- 最近チェックした商品セクション -->
-    <section class="products-section">
-        <div class="products-container">
-            <!-- セクションタイトル -->
-            <div class="products-header">
-                <h2 class="products-title">
-                    最近チェックした商品 <span class="products-subtitle">Checked Items</span>
-                </h2>
-            </div>
 
-            <!-- 商品カード5列グリッド（新着商品とまったく同じ構造を流用） -->
-            <div class="products-grid">
-
-                <!-- 商品1 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-1.jpg" alt="Harley-Davidson">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">4,700<span class="currency">円</span></div>
-                        <div class="product-tax">(税込5,170円)</div>
-                        <div class="product-brand">Harley-Davidson</div>
-                        <div class="product-size">メンズS</div>
-                        <div class="product-condition">コンディションA</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 商品2 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-2.jpg" alt="Ralph Lauren">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">6,200<span class="currency">円</span></div>
-                        <div class="product-tax">(税込6,820円)</div>
-                        <div class="product-brand">Ralph Lauren</div>
-                        <div class="product-size">メンズXL</div>
-                        <div class="product-condition">コンディションB</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 商品3 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-3.jpg" alt="Carhartt">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">3,800<span class="currency">円</span></div>
-                        <div class="product-tax">(税込4,180円)</div>
-                        <div class="product-brand">Carhartt</div>
-                        <div class="product-size">レディースL</div>
-                        <div class="product-condition">コンディションA</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 商品4 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-4.jpg" alt="Columbia">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">5,900<span class="currency">円</span></div>
-                        <div class="product-tax">(税込6,490円)</div>
-                        <div class="product-brand">Columbia</div>
-                        <div class="product-size">メンズXL</div>
-                        <div class="product-condition">コンディションC</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 商品5 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-5.jpg" alt="LACOSTE">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">4,300<span class="currency">円</span></div>
-                        <div class="product-tax">(税込4,730円)</div>
-                        <div class="product-brand">LACOSTE</div>
-                        <div class="product-size">レディースM</div>
-                        <div class="product-condition">コンディションB</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- 3つ並びのリンクバナーセクション -->
     <section class="info-banners-section">
         <div class="info-banners-container">
 
-            <!-- バナー1：送料・配送について -->
-            <a href="#" class="info-banner-link" style="background-image: url('images/banner-shipping.jpg');">
+            <!-- バナー1：在庫・お取り置きについて -->
+            <a href="#" class="info-banner-link" style="background-image: url('images/banner-stock.jpg');">
                 <div class="info-banner-overlay">
-                    <span class="info-banner-text">送料・配送について</span>
+                    <span class="info-banner-text">在庫・お取り置きについて</span>
                 </div>
             </a>
 
@@ -362,299 +218,19 @@
         </div>
     </section>
 
-    <!-- 人気ブランド商品セクション -->
-    <section class="products-section brand-section">
-        <div class="products-container">
-            <!-- セクションタイトル -->
-            <div class="products-header">
-                <h2 class="products-title">
-                    人気ブランド商品 <span class="products-subtitle">Featured brand items</span>
-                </h2>
+    
+
+    <!-- スタッフ募集セクション -->
+    <section class="recruit-section">
+        <div class="recruit-container">
+            <h2 class="recruit-title">NEW STAFF募集中</h2>
+
+            <div class="recruit-arrows">
+                <span class="arrow">▼</span>
+                <span class="arrow">▼</span>
             </div>
 
-            <!-- 5列ブランドグリッド -->
-            <div class="products-grid">
-
-                <!-- ブランド1 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-1.jpg" alt="Ralph Lauren">
-                    </a>
-                    <div class="brand-info">
-                        <div class="brand-name-en">Ralph Lauren</div>
-                        <div class="brand-name-ja">ラルフローレン</div>
-                    </div>
-                </div>
-
-                <!-- ブランド2 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-2.jpg" alt="Levi's">
-                    </a>
-                    <div class="brand-info">
-                        <div class="brand-name-en">Levi's</div>
-                        <div class="brand-name-ja">リーバイス</div>
-                    </div>
-                </div>
-
-                <!-- ブランド3 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-3.jpg" alt="LACOSTE">
-                    </a>
-                    <div class="brand-info">
-                        <div class="brand-name-en">LACOSTE</div>
-                        <div class="brand-name-ja">ラコステ</div>
-                    </div>
-                </div>
-
-                <!-- ブランド4 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-4.jpg" alt="Tommy Hilfiger">
-                    </a>
-                    <div class="brand-info">
-                        <div class="brand-name-en">Tommy Hilfiger</div>
-                        <div class="brand-name-ja">トミーヒルフィガー</div>
-                    </div>
-                </div>
-
-                <!-- ブランド5 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-5.jpg" alt="Ami Paris">
-                    </a>
-                    <div class="brand-info">
-                        <div class="brand-name-en">Ami Paris</div>
-                        <div class="brand-name-ja">アミパリス</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- もっと見るリンク -->
-            <div class="products-more">
-                <a href="#">&rarr;もっと見る</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- お気に入りに登録した商品セクション -->
-    <section class="products-section">
-        <div class="products-container">
-            <!-- セクションタイトル -->
-            <div class="products-header">
-                <h2 class="products-title">
-                    お気に入りに登録した商品 <span class="products-subtitle">Your favorite items</span>
-                </h2>
-            </div>
-
-            <!-- 商品カード5列グリッド（ボタンなしバージョン） -->
-            <div class="products-grid">
-
-                <!-- 商品1 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-1.jpg" alt="Harley-Davidson">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">4,700<span class="currency">円</span></div>
-                        <div class="product-tax">(税込5,170円)</div>
-                        <div class="product-brand">Harley-Davidson</div>
-                        <div class="product-size">メンズS</div>
-                        <div class="product-condition">コンディションA</div>
-                    </div>
-                </div>
-
-                <!-- 商品2 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-2.jpg" alt="Ralph Lauren">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">6,200<span class="currency">円</span></div>
-                        <div class="product-tax">(税込6,820円)</div>
-                        <div class="product-brand">Ralph Lauren</div>
-                        <div class="product-size">メンズXL</div>
-                        <div class="product-condition">コンディションB</div>
-                    </div>
-                </div>
-
-                <!-- 商品3 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-3.jpg" alt="Carhartt">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">3,800<span class="currency">円</span></div>
-                        <div class="product-tax">(税込4,180円)</div>
-                        <div class="product-brand">Carhartt</div>
-                        <div class="product-size">レディースL</div>
-                        <div class="product-condition">コンディションA</div>
-                    </div>
-                </div>
-
-                <!-- 商品4 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-4.jpg" alt="Columbia">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">5,900<span class="currency">円</span></div>
-                        <div class="product-tax">(税込6,490円)</div>
-                        <div class="product-brand">Columbia</div>
-                        <div class="product-size">メンズXL</div>
-                        <div class="product-condition">コンディションC</div>
-                    </div>
-                </div>
-
-                <!-- 商品5 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-5.jpg" alt="LACOSTE">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">4,300<span class="currency">円</span></div>
-                        <div class="product-tax">(税込4,730円)</div>
-                        <div class="product-brand">LACOSTE</div>
-                        <div class="product-size">レディースM</div>
-                        <div class="product-condition">コンディションB</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- もっと見るリンク -->
-            <div class="products-more">
-                <a href="#">&rarr;もっと見る</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- スタイリング例セクション -->
-    <section class="styling-section">
-        <div class="styling-container">
-            <!-- 2枚横並びの画像エリア -->
-            <div class="styling-grid">
-                <div class="styling-card">
-                    <img src="images/style-1.jpg" alt="スタイリング例1">
-                </div>
-                <div class="styling-card">
-                    <img src="images/style-2.jpg" alt="スタイリング例2">
-                </div>
-            </div>
-
-            <!-- リンク -->
-            <div class="styling-more">
-                <a href="#">&rarr;スタイリング例を見る</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- おすすめの商品セクション -->
-    <section class="products-section">
-        <div class="products-container">
-            <!-- セクションタイトル -->
-            <div class="products-header">
-                <h2 class="products-title">
-                    おすすめの商品 <span class="products-subtitle">Recommended Items</span>
-                </h2>
-            </div>
-
-            <!-- 商品カード5列グリッド -->
-            <div class="products-grid">
-
-                <!-- 商品1 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-1.jpg" alt="Harley-Davidson">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">4,700<span class="currency">円</span></div>
-                        <div class="product-tax">(税込5,170円)</div>
-                        <div class="product-brand">Harley-Davidson</div>
-                        <div class="product-size">メンズS</div>
-                        <div class="product-condition">コンディションA</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 商品2 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-2.jpg" alt="Ralph Lauren">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">6,200<span class="currency">円</span></div>
-                        <div class="product-tax">(税込6,820円)</div>
-                        <div class="product-brand">Ralph Lauren</div>
-                        <div class="product-size">メンズXL</div>
-                        <div class="product-condition">コンディションB</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 商品3 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-3.jpg" alt="Carhartt">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">3,800<span class="currency">円</span></div>
-                        <div class="product-tax">(税込4,180円)</div>
-                        <div class="product-brand">Carhartt</div>
-                        <div class="product-size">レディースL</div>
-                        <div class="product-condition">コンディションA</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 商品4 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-4.jpg" alt="Columbia">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">5,900<span class="currency">円</span></div>
-                        <div class="product-tax">(税込6,490円)</div>
-                        <div class="product-brand">Columbia</div>
-                        <div class="product-size">メンズXL</div>
-                        <div class="product-condition">コンディションC</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 商品5 -->
-                <div class="product-card">
-                    <a href="#" class="product-image-link">
-                        <img src="images/item-5.jpg" alt="LACOSTE">
-                    </a>
-                    <div class="product-info">
-                        <div class="product-price">4,300<span class="currency">円</span></div>
-                        <div class="product-tax">(税込4,730円)</div>
-                        <div class="product-brand">LACOSTE</div>
-                        <div class="product-size">レディースM</div>
-                        <div class="product-condition">コンディションB</div>
-                        <button type="button" class="fav-button">
-                            <i class="fa-solid fa-heart"></i> お気に入りに登録する
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- もっと見るリンク -->
-            <div class="products-more">
-                <a href="#">&rarr;もっと見る</a>
-            </div>
+            <a href="#" class="recruit-btn">募集要項を見る</a>
         </div>
     </section>
 
@@ -668,7 +244,7 @@
                     <div class="sns-box">
                         <div class="sns-box-left">
                             <img src="images/icon-instagram.png" alt="Instagram" class="sns-icon">
-                            <span class="sns-account">@shopname</span>
+                            <span class="sns-account">@thrift</span>
                         </div>
                         <div class="sns-box-right">
                             <h3 class="sns-title">Instagramで最新情報を配信中！</h3>
@@ -684,7 +260,7 @@
                     <div class="sns-box">
                         <div class="sns-box-left">
                             <img src="images/icon-line.png" alt="LINE" class="sns-icon line-icon">
-                            <span class="sns-account">@shopname</span>
+                            <span class="sns-account">@thrift</span>
                         </div>
                         <div class="sns-box-right">
                             <h3 class="sns-title">LINEでお得な情報を配信中！</h3>
@@ -697,29 +273,13 @@
         </div>
     </section>
 
-    <!-- フッター -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            <!-- 左側：ブランド名 -->
-            <div class="footer-brand">
-                <a href="index.html">THRIFT</a>
-            </div>
+    <!-- フッターを読み込むための場所 -->
+    <div id="footer-placeholder"></div>
 
-            <!-- 右側：各種リンク -->
-            <div class="footer-links">
-                <ul class="footer-menu">
-                    <li><a href="#">THRIFTについて</a></li>
-                    <li><a href="#">プライバシーポリシー</a></li>
-                    <li><a href="#">送料・配送について</a></li>
-                    <li><a href="#">特定商取引法に基づく表示</a></li>
-                    <li><a href="#">返品・交換について</a></li>
-                    <li><a href="#">お問い合わせ</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
+    <!-- 共通スクリプト（ヘッダー自動読み込みなど） -->
     <script src="script.js"></script>
 </body>
+
+</html>
 
 </html>

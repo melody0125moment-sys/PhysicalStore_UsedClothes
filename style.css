@@ -12,14 +12,18 @@ body {
 }
 
 /* ヘッダー全体（画面上部に固定） */
+.site-header,
 .header {
-    position: fixed; /* スクロールしても上に固定 */
+    position: fixed;
+    /* スクロールしても上に固定 */
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #1a1936; /* Figmaのダークネイビー色 */
+    background-color: #1a1936;
+    /* Figmaのダークネイビー色 */
     color: #ffffff;
-    z-index: 1000; /* 常に一番手前に表示 */
+    z-index: 1000;
+    /* 常に一番手前に表示 */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -29,7 +33,8 @@ body {
     margin: 0 auto;
     padding: 12px 24px;
     display: flex;
-    justify-content: space-between; /* ロゴを左、アイコンを右に配置 */
+    justify-content: space-between;
+    /* ロゴを左、アイコンを右に配置 */
     align-items: center;
 }
 
@@ -37,66 +42,44 @@ body {
 .logo a {
     color: #ffffff;
     text-decoration: none;
-    font-family: 'Ledger', serif; /* セリフ体でシックな雰囲気に */
+    font-family: 'Ledger', serif;
+    /* セリフ体でシックな雰囲気に */
     font-size: 24px;
     letter-spacing: 2px;
     font-weight: normal;
 }
 
-/* 右側アイコンエリア */
-.header-icons {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* アイコン同士の間隔 */
-}
-
-.icon-item {
-    color: #ffffff;
-    text-decoration: none;
+/* ハンバーガーメニューボタン */
+.menu-toggle {
     background: none;
     border: none;
+    color: #ffffff;
+    font-size: 22px;
     cursor: pointer;
+    padding: 6px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    position: relative;
-    font-size: 11px;
+    justify-content: center;
+    transition: opacity 0.2s ease;
 }
 
-.icon-item .icon {
-    font-size: 18px;
-    margin-bottom: 2px;
+.menu-toggle:hover {
+    opacity: 0.7;
 }
 
-/* カートの数字バッジ */
-.cart-item {
-    position: relative;
-}
-
-/* カートアイコンだけ大きく */
-.cart-icon {
-    font-size: 24px;
-}
-
-.badge {
-    position: absolute;
-    top: -2px;
-    right: 4px;
-    background-color: #cccccc;
-    color: #1a1936;
-    border-radius: 50%;
-    padding: 1px 5px;
-    font-size: 10px;
-    font-weight: bold;
-}
 
 /* メインビジュアル（ヒーローセクション） */
 .hero {
-    margin-top: 55px; /* ヘッダーの高さ分、上をあける */
-    height: 80vh; /* 画面高さの約80%の高さにする */
-    background-image: url('images/hero-bg.jpg'); /* さっき保存した画像パス */
-    background-size: cover; /* 画面いっぱいに綺麗に広げる */
-    background-position: center; /* 画像の中心を表示 */
+    margin-top: 55px;
+    /* ヘッダーの高さ分、上をあける */
+    height: 80vh;
+    /* 画面高さの約80%の高さにする */
+    background-image: url('images/hero-bg.jpg');
+    /* さっき保存した画像パス */
+    background-size: cover;
+    /* 画面いっぱいに綺麗に広げる */
+    background-position: center;
+    /* 画像の中心を表示 */
     position: relative;
 }
 
@@ -104,7 +87,8 @@ body {
 .hero-overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 黒色を50%透過 */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 黒色を50%透過 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,7 +112,8 @@ body {
 
 /* キャッチコピー */
 .hero-subtitle {
-    font-family: serif; /* セリフ体 */
+    font-family: serif;
+    /* セリフ体 */
     font-size: 20px;
     font-weight: 300;
     letter-spacing: 2px;
@@ -136,7 +121,8 @@ body {
 
 /* お知らせセクション全体 */
 .news-section {
-    background-color: #e8e8e0; /* 背景の生成り／薄いグレージュ色 */
+    background-color: #e8e8e0;
+    /* 背景の生成り／薄いグレージュ色 */
     padding: 60px 20px;
 }
 
@@ -150,11 +136,12 @@ body {
 
 /* 内側のグレーボックス */
 .news-box {
-    background-color: #dcdfe6; /* 内側の薄いグレー */
+    background-color: #dcdfe6;
+    /* 内側の薄いグレー */
     width: 100%;
     max-width: 600px;
     padding: 24px 32px;
-    border-radius: 8px; 
+    border-radius: 8px;
     text-align: center;
 }
 
@@ -181,45 +168,31 @@ body {
 
 .news-list li a {
     color: #564F65;
-    text-decoration: underline; /* 下線あり */
+    text-decoration: underline;
+    /* 下線あり */
     font-size: 14px;
     transition: opacity 0.2s;
 }
 
 .news-list li a:hover {
-    opacity: 0.7; /* ホバー時に少し透明にする */
+    opacity: 0.7;
+    /* ホバー時に少し透明にする */
 }
 
 /* コンセプトバナーセクション全体 */
 .concept-banner {
-    background-color: #e8e8e0; /* 背景の生成り色（お知らせと合わせる） */
-    padding: 20px 20px 60px; /* 上・左右・下の余白 */
+    background-color: #e8e8e0;
+    /* 背景の生成り色（お知らせと合わせる） */
+    padding-top: 60px;   
+    padding-bottom: 80px;        /* ★上下にたっぷりとパディングをとることで、外側の白を露出させずにスペースを作る */
+    margin: 0;
+    width: 100%;
 }
 
 /* 幅の制限と中央寄せ */
 .concept-banner-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-}
-
-/* バナー本体（リンクエリア） */
-.concept-banner-link {
-    display: block;
-    text-decoration: none;
-    height: 240px; /* バナーの高さ（お好みで調整できます） */
-    background-image: url('images/about-bg.jpg'); /* 保存した画像 */
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    border-radius: 4px;
-    overflow: hidden; /* 角丸からはみ出ないようにする */
-}
-
-/* コンセプトバナーセクション全体 */
-.concept-banner {
-    background-color: #e8e8e0; /* 背景の生成り色 */
-    padding: 0;
-    width: 100%;
 }
 
 /* ヒーローエリアと同じ最大幅（1200px）にして中央寄せ */
@@ -232,7 +205,8 @@ body {
 .concept-banner-link {
     display: block;
     text-decoration: none;
-    height: 180px; /* バナーの高さ */
+    height: 300px;
+    /* バナーの高さ */
     background-image: url('images/about-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -267,7 +241,8 @@ body {
 
 /* ピックアップセクション全体 */
 .pickup-section {
-    background-color: #e8e8e0; /* 背景の生成り色 */
+    background-color: #e8e8e0;
+    /* 背景の生成り色 */
     padding: 40px 20px 60px;
 }
 
@@ -285,7 +260,8 @@ body {
 .pickup-title {
     font-size: 22px;
     font-family: serif;
-    color: #564F65; /* 指定したカラー */
+    color: #564F65;
+    /* 指定したカラー */
     font-weight: normal;
     display: flex;
     align-items: baseline;
@@ -303,8 +279,10 @@ body {
 /* 4列横並びのレイアウト */
 .pickup-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 均等に4列 */
-    gap: 20px; /* 画像同士の間隔 */
+    grid-template-columns: repeat(4, 1fr);
+    /* 均等に4列 */
+    gap: 20px;
+    /* 画像同士の間隔 */
     margin-bottom: 30px;
 }
 
@@ -318,13 +296,15 @@ body {
 .pickup-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 枠いっぱいに綺麗に表示 */
+    object-fit: cover;
+    /* 枠いっぱいに綺麗に表示 */
     display: block;
 }
 
 /* ホバー時にほんのり拡大 */
 .pickup-card:hover {
-    transform: translateY(-5px); /* 少し上に浮き上がる */
+    transform: translateY(-5px);
+    /* 少し上に浮き上がる */
     opacity: 0.8;
 }
 
@@ -395,7 +375,8 @@ body {
 .product-image-link {
     display: block;
     width: 100%;
-    aspect-ratio: 1 / 1; /* 正方形に揃える */
+    aspect-ratio: 1 / 1;
+    /* 正方形に揃える */
     overflow: hidden;
     margin-bottom: 12px;
     background-color: #f0f0f0;
@@ -409,7 +390,8 @@ body {
 }
 
 .product-image-link:hover img {
-    transform: scale(1.05); /* ホバー時にほんのりズーム */
+    transform: scale(1.05);
+    /* ホバー時にほんのりズーム */
 }
 
 /* 商品情報テキストエリア */
@@ -450,35 +432,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* お気に入りボタン */
-.fav-button {
-    width: 85%;
-    margin: 6px auto 0;
-    padding: 8px 4px;
-    background-color: #dcd7d4; /* 薄いベージュグレーのボタン */
-    border: none;
-    border-radius: 4px;
-    color: #7D5260;
-    font-size: 11px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.fav-button:hover {
-    background-color: #c8bebb;
-}
-
-/* ハートアイコン（微調整して文字と揃える） */
-.fav-button i {
-    font-size: 11px;
-    color: #7D5260;
-    transform: translateY(1px); /* ハートを1pxだけ下げる */
-}
-
 /* 「→もっと見る」リンク */
 .products-more {
     text-align: left;
@@ -507,15 +460,18 @@ body {
     max-width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 均等に3列 */
-    gap:0; /* バナー同士の間隔 */
+    grid-template-columns: repeat(3, 1fr);
+    /* 均等に3列 */
+    gap: 0;
+    /* バナー同士の間隔 */
 }
 
 /* 個別のバナーリンク */
 .info-banner-link {
     display: block;
     text-decoration: none;
-    height: 200px; /* バナーの高さ（お好みで調整可） */
+    height: 200px;
+    /* バナーの高さ（お好みで調整可） */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -527,7 +483,8 @@ body {
 .info-banner-overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* ご希望の薄暗い膜 */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* ご希望の薄暗い膜 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -569,6 +526,16 @@ body {
     font-family: serif;
 }
 
+/* 3つ並びのインフォバナーセクション */
+.info-banners-section {
+    background-color: #e8e8e0;
+    /* 背景を統一 */
+    margin-bottom: 0;
+    /* 外側の余白はゼロにする */
+    padding-bottom: 50px;
+    /* 代わりに「内側の下パディング」で下にスペースを作る */
+}
+
 /* スタイリング例セクション全体 */
 .styling-section {
     background-color: #e8e8e0;
@@ -586,27 +553,30 @@ body {
 .styling-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0; /* 画像同士の隙間をゼロに */
+    gap: 0;
+    /* 画像同士の隙間をゼロに */
     margin-bottom: 20px;
 }
 
 .styling-card {
-    height: 320px; /* 画像の高さ（お好みで 280px〜360px で調整可） */
+    height: 320px;
+    /* 画像の高さ（お好みで 280px〜360px で調整可） */
     overflow: hidden;
 }
 
 .styling-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 枠いっぱいに綺麗にトリミング表示 */
+    object-fit: cover;
+    /* 枠いっぱいに綺麗にトリミング表示 */
     display: block;
 }
 
 /* 「→スタイリング例を見る」リンク */
-.styling-more {
+/* .styling-more {
     text-align: left;
     padding-left: 20px;
-}
+} */
 
 .styling-more a {
     color: #564F65;
@@ -619,10 +589,78 @@ body {
     opacity: 0.7;
 }
 
+/* スタッフ募集セクション全体 */
+.recruit-section {
+    background-color: #e8e8e0;
+    /* 背景色 */
+    padding: 80px 20px 140px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.recruit-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* タイトルテキスト */
+.recruit-title {
+    font-family: serif;
+    font-size: 25px;
+    color: #564F65;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+/* 矢印エリア */
+.recruit-arrows {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 24px;
+}
+
+.recruit-arrows .arrow {
+    font-size: 11px;
+    color: #564F65;
+    line-height: 2;
+}
+
+/* 募集要項を見るボタン（二重線風デザイン） */
+.recruit-btn {
+    display: inline-block;
+    padding: 12px 36px;
+    background-color: #564F65;
+    /* ボタン背景色 */
+    color: #ffffff;
+    /* 文字色 */
+    font-family: serif;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 8px;
+    /* 外側の角丸 */
+    border: 2px solid #ffffff;
+    /* 内側の白いライン効果 */
+    outline: 2px solid #564F65;
+    /* 外側のダークライン効果 */
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.recruit-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
 /* SNSセクション全体 */
 .sns-section {
     background-color: #e8e8e0;
-    padding: 0 0 60px 0; /* 左右の余白をゼロに */
+    padding: 0 0 60px 0;
+    /* 左右の余白をゼロに */
     width: 100%;
     padding: 0;
 }
@@ -666,7 +704,8 @@ body {
 
 /* 中央の半透明ホワイト（ライトグレー）ボックス */
 .sns-box {
-    background-color: rgba(230, 230, 230, 0.75); /* 半透明の薄いグレーボックス */
+    background-color: rgba(230, 230, 230, 0.75);
+    /* 半透明の薄いグレーボックス */
     width: 100%;
     max-width: 680px;
     height: 100%;
@@ -693,7 +732,8 @@ body {
 }
 
 .line-icon {
-    width: 72px; /* ★Instagramアイコン(64px)と視覚的な大きさが揃うように大きめ指定 */
+    width: 72px;
+    /* ★Instagramアイコン(64px)と視覚的な大きさが揃うように大きめ指定 */
     height: 72px;
 }
 
@@ -720,9 +760,11 @@ body {
     font-weight: bold;
     padding-bottom: 10px;
     margin-bottom: 14px;
-    border-bottom: 1px solid #564F65;/* タイトル下線 */
+    border-bottom: 1px solid #564F65;
+    /* タイトル下線 */
     width: 100%;
-    text-align: center; /* ★文字を線の中央に配置 */
+    text-align: center;
+    /* ★文字を線の中央に配置 */
 }
 
 
@@ -743,7 +785,8 @@ body {
     background: linear-gradient(to bottom, #e8e8e0 0%, #1a1936 150px);
     background-color: #1a1936;
     color: #ffffff;
-    padding: 250px 80px 100px 80px; /* 上部のパディングを大きくとって、文字を下の濃いエリアに配置 */
+    padding: 250px 80px 100px 80px;
+    /* 上部のパディングを大きくとって、文字を下の濃いエリアに配置 */
     width: 100%;
     margin-top: 0;
 }
@@ -776,7 +819,8 @@ body {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 24px 60px; /* 行間・列間をゆったり取る */
+    gap: 24px 60px;
+    /* 行間・列間をゆったり取る */
     padding: 0;
     margin: 0;
 }
@@ -785,7 +829,8 @@ body {
     color: #ffffff;
     text-decoration: none;
     font-family: serif;
-    font-size: 17px; /* ★文字サイズをさらに大きくして読みやすく */
+    font-size: 17px;
+    /* ★文字サイズをさらに大きくして読みやすく */
     letter-spacing: 0.8px;
     transition: opacity 0.3s ease;
 }
