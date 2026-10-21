@@ -521,7 +521,8 @@ html, body {
 /* 3連バナーセクション全体 */
 .info-banners-section {
     background-color: #e8e8e0;
-    padding: 0 0 60px 0;
+    padding: 0 0 50px 0; /* 上・左右を0、下に50pxのパディング */
+    margin: 0;
     width: 100%;
 }
 
@@ -574,6 +575,11 @@ html, body {
     letter-spacing: 2px;
 }
 
+/* PCではスマホ用改行を非表示にして一行にする */
+.sp-br {
+    display: none;
+}
+
 /* ブランド情報テキストエリア */
 .brand-info {
     text-align: center;
@@ -594,16 +600,6 @@ html, body {
     font-size: 12px;
     color: #7a7585;
     font-family: serif;
-}
-
-/* 3つ並びのインフォバナーセクション */
-.info-banners-section {
-    background-color: #e8e8e0;
-    /* 背景を統一 */
-    margin-bottom: 0;
-    /* 外側の余白はゼロにする */
-    padding-bottom: 50px;
-    /* 代わりに「内側の下パディング」で下にスペースを作る */
 }
 
 /* スタイリング例セクション全体 */
@@ -908,38 +904,14 @@ html, body {
 .footer-menu li a:hover {
     opacity: 0.7;
 }
-
-/* ==========================================
-   スマホ用（画面幅768px以下）のレスポンシブ対応
-   ========================================== */
-@media screen and (max-width: 768px) {
-    .global-menu {
-        width: 100%;       /* スマホでは横幅いっぱいに広げる */
-        right: -100%;
-    }
-    
-    .global-menu.active {
-        right: 0;
-    }
+/* コピーライトのスタイル */
+.footer-copyright {
+    text-align: right;         /* 画面中央に配置 */
+    color: rgba(255, 255, 255, 0.6); /* 少しだけ透明感を持たせた白（上品に見えます） */
+    font-size: 11px;            /* 小さめにスッキリと */
+    font-family: sans-serif;    /* メインのフォントより少しシンプルにすると綺麗です */
+    letter-spacing: 1px;
+    margin-top: 100px;           /* メニューやロゴとの間にしっかり余白を空ける */
+    margin-bottom: 0;
 }
 
-/*  */
-@media screen and (max-width: 768px) {
-    .hero {
-        height: 40vh; /* スマホでは高さを少し抑えてスッキリ見せる（60vh〜70vhくらいがおすすめ） */
-    }
-
-    /* THRIFT タイトルをスマホ用に縮小 */
-    .hero-title {
-        font-size: 38px; /* 64pxからスマホ用に小さく調整 */
-        letter-spacing: 2px;
-        margin-bottom: 16px;
-    }
-
-    /* キャッチコピーも少し調整 */
-    .hero-subtitle {
-        font-size: 14px; /* 20pxから小さく調整 */
-        letter-spacing: 1px;
-        line-height: 1.6;
-    }
-}
