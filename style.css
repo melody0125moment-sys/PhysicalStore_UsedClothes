@@ -137,17 +137,7 @@ html, body {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* スマホ用スタイル（画面幅768px以下） */
-@media screen and (max-width: 768px) {
-    .global-menu {
-        width: 100%;       /* スマホでは横幅いっぱいに広げる */
-        right: -100%;
-    }
-    
-    .global-menu.active {
-        right: 0;
-    }
-}
+
 /* メインビジュアル（ヒーローセクション） */
 .hero {
     margin-top: 55px;
@@ -917,4 +907,39 @@ html, body {
 
 .footer-menu li a:hover {
     opacity: 0.7;
+}
+
+/* ==========================================
+   スマホ用（画面幅768px以下）のレスポンシブ対応
+   ========================================== */
+@media screen and (max-width: 768px) {
+    .global-menu {
+        width: 100%;       /* スマホでは横幅いっぱいに広げる */
+        right: -100%;
+    }
+    
+    .global-menu.active {
+        right: 0;
+    }
+}
+
+/*  */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 40vh; /* スマホでは高さを少し抑えてスッキリ見せる（60vh〜70vhくらいがおすすめ） */
+    }
+
+    /* THRIFT タイトルをスマホ用に縮小 */
+    .hero-title {
+        font-size: 38px; /* 64pxからスマホ用に小さく調整 */
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+    }
+
+    /* キャッチコピーも少し調整 */
+    .hero-subtitle {
+        font-size: 14px; /* 20pxから小さく調整 */
+        letter-spacing: 1px;
+        line-height: 1.6;
+    }
 }

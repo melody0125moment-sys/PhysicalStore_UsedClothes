@@ -1,0 +1,143 @@
+/* スマホのときだけ適用する（画面幅768px以下） */
+.hero {
+    height: 60vh;
+}
+
+.hero-title {
+    font-size: 40px;
+}
+
+/* ヘッダーのロゴ大きさ調整 */
+.logo a {
+    font-size: 18px;     /* PC用の24pxからスマホ用に小さくスッキリさせる */
+    letter-spacing: 1.5px; /* 文字間隔も少しだけ詰める */
+}
+
+/* メニュー設定 */
+@media screen and (max-width: 768px) {
+    .global-menu {
+        width: 100%;
+        /* スマホでは横幅いっぱいに広げる */
+        right: -100%;
+    }
+
+    .global-menu.active {
+        right: 0;
+    }
+}
+
+/* ヒーローセクション */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 40vh;
+        /* スマホでは高さを少し抑えてスッキリ見せる（60vh〜70vhくらいがおすすめ） */
+    }
+
+    /* THRIFT タイトルをスマホ用に縮小 */
+    .hero-title {
+        font-size: 38px;
+        /* 64pxからスマホ用に小さく調整 */
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+    }
+
+    /* キャッチコピーも少し調整 */
+    .hero-subtitle {
+        font-size: 14px;
+        /* 20pxから小さく調整 */
+        letter-spacing: 1px;
+        line-height: 1.6;
+    }
+}
+
+/* お知らせセクション */
+@media screen and (max-width: 768px) {
+
+    /* お知らせのグレーボックス部分 */
+    .news-box,
+    .info-box,
+    .news-container {
+        width: 95%;
+        /* 画面幅に対して少し余裕を持たせる（例: 90%や88%など） */
+        max-width: 360px;
+        /* 広がりすぎないように最大幅を制限 */
+        margin: 0 auto;
+        /* 左右中央に配置 */
+    }
+}
+
+/* コンセプトバナー */
+
+/* バナーの高さを少し縮める（PCの300pxから調整） */
+.concept-banner-link {
+    height: 200px; /* お好みで 180px 〜 220px くらいに調整可能 */
+}
+
+/* 「THRIFTについて」の文字サイズを小さくする */
+.concept-banner-title {
+    font-size: 22px; /* 32pxからスマホ用にスッキリサイズへ調整 */
+    letter-spacing: 2px;
+}
+/* コンセプトバナーの上下の隙間を狭める */
+.concept-banner {
+    padding-top: 30px;    /* 上（お知らせとの間）を狭める */
+    padding-bottom: 30px; /* 下（ピックアップとの間）を狭める */
+}
+
+/* ピックアップ */
+/* 1. グリッドの並びを解除して、横一列（flex）＆スクロール可能にする */
+.pickup-grid {
+    display: flex;
+    grid-template-columns: none; /* PC用の4列設定をリセット */
+    overflow-x: auto;            /* 横スクロールを有効にする */
+    scroll-snap-type: x mandatory; /* スクロールしたときに位置がピタッと止まる */
+    gap: 15px;                   /* カード同士の間隔 */
+    padding-bottom: 15px;        /* スクロールバーとの余白 */
+    margin-bottom: 20px;
+    
+    /* スマホ画面の端までスクロールできるようにするための隠し技 */
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 20px; /* 右側だけ次のカードをチラ見せするための余白を残す */
+    
+    scrollbar-width: none;
+}
+
+/* Chrome / Safari用のスクロールバー非表示 */
+.pickup-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* 2. 各カードの幅を指定して、「2個＋3個目がチラ見え」するようにする */
+.pickup-card {
+    flex: 0 0 45%;             /* 画面幅に対して「75%」のサイズ（これで3つ目がいい感じに途切れる） */
+    max-width: 240px;          /* 大きくなりすぎないように制限 */
+    scroll-snap-align: start;  /* スクロール時のスナップ位置 */
+}
+
+
+/* 新着入荷商品セクション */
+
+/* 1. PC用の5列グリッドを解除して、横一列＆スクロール可能にする */
+.products-grid {
+    display: flex;
+    grid-template-columns: none; /* PC用の設定をリセット */
+    overflow-x: auto;            /* 横スクロール有効 */
+    scroll-snap-type: x mandatory; /* ピタッと止まるスナップ機能 */
+    gap: 15px;                   /* カード同士の間隔 */
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    scrollbar-width: none;       /* Firefox用スクロールバー非表示 */
+}
+
+.products-grid::-webkit-scrollbar {
+    display: none;               /* Chrome/Safari用スクロールバー非表示 */
+}
+
+/* 2. 各商品カードの幅をピックアップと同様に「45%（2個＋3個目チラ見え）」に設定 */
+.product-card {
+    flex: 0 0 40%;             /* 画面に対して45%の幅（2個並んで3個目が半分切れる） */
+    max-width: 180px;          /* 大きくなりすぎないように制限 */
+    scroll-snap-align: start;
+}
