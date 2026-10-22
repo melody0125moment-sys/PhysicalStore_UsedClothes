@@ -21,7 +21,7 @@ html, body {
 }
 
 .back-link a {
-    font-size: 13px; /* お好みで 13px や 12px などに調整してください */
+    font-size: 13px; 
 }
 
 /* ヘッダー全体（画面上部に固定） */
@@ -1092,3 +1092,103 @@ html, body {
     letter-spacing: 1px;
 }
 
+/* ピックアップ */
+/* ピックアップセクション全体（背景色をここで綺麗に1つにまとめる） */
+.all-pickup-section {
+    background-color: #e8e8e0;
+    padding: 80px 80px 20px 20px; /* 下に余裕を持たせて下のページやフッターへ自然に繋げる */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 中央寄せコンテナ */
+.all-pickup-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* トップページに戻るリンク */
+.back-link {
+    margin-bottom: 25px;
+}
+
+/* タイトルとページネーションを横並びにするエリア */
+.all-pickup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(86, 79, 101, 0.3);
+    padding-bottom: 15px;
+}
+
+/* ページネーション */
+.pagination {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    font-family: serif;
+}
+
+.pagination a, 
+.pagination .current {
+    color: #443B57;
+    text-decoration: none;
+}
+
+.pagination .current {
+    font-weight: bold;
+    border-bottom: 1px solid #443B57;
+}
+
+/* 4列横並びのレイアウト */
+.all-pickup-grid {
+    display: grid;
+    grid-repeat: repeat(4, 1fr); /* 念のため修正：grid-template-columns です！ */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 20px;
+}
+
+/* バナーカード全体のリンク */
+.all-pickup-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.all-pickup-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* カードの文字タイトルと説明文 */
+.card-title {
+    font-size: 14px;
+    font-family: serif;
+    color: #443B57;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card-text {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #666666;
+}
+
+/* ホバー時にほんのり拡大 */
+.all-pickup-card a:hover {
+    transform: translateY(-4px);
+    opacity: 0.8;
+}
+
+.pickup-footer-area {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between; /* 左右の端にそれぞれ配置 */
+    align-items: center;
+}

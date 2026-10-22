@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ピックアップ一覧 - THRIFT</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- ★スマホ用の別CSS（768px以下でのみ読み込まれる） -->
+    <link rel="stylesheet" href="sp.css" media="screen and (max-width: 768px)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts (MonteCarlo) の読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts に Ledger を追加 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ledger&family=MonteCarlo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 共通ヘッダー読み込みエリア -->
+    <div id="header-placeholder"></div>
+
+    <section class="all-pickup-section">
+        <div class="all-pickup-container">
+            <div class="pickup-inner">
+
+                <!-- タイトルとページネーションのエリア -->
+                <div class="all-pickup-header">
+                    <h2 class="pickup-title">
+                        ピックアップ <span class="pickup-subtitle">Featured</span>
+                    </h2>
+                    <div class="pagination">
+                        <a href="#" class="current">1</a>
+                        <a href="#" class="next">次へ</a>
+                    </div>
+                </div>
+
+                <!-- 4列のカード一覧 -->
+                <div class="all-pickup-grid">
+
+                    <!-- 1つ目の記事 -->
+                    <article class="all-pickup-card">
+                        <a href="news-sale.html">
+                            <div class="card-img">
+                                <img src="images/pickup-1.jpg" alt="夏物SALE開催中！">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">夏物SALE開催中！</h3>
+                                <p class="card-text">お得なMAX70%OFF！この機会にぜひお立ち寄りください。</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- 2つ目の記事 -->
+                    <article class="all-pickup-card">
+                        <a href="news-jeans.html">
+                            <div class="card-img">
+                                <img src="images/pickup-2.jpg" alt="大人のJEANS特集">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">大人のJEANS特集</h3>
+                                <p class="card-text">穿き込むほどに馴染む一本をセレクト。カジュアルすぎない、上質なデイリーウェアを提案します。</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- 3つ目の記事 -->
+                    <article class="all-pickup-card">
+                        <a href="news-jeans.html">
+                            <div class="card-img">
+                                <img src="images/pickup-3.jpg" alt="秋のアウター特集">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">秋のアウター特集</h3>
+                                <p class="card-text">軽やかなブルゾンから仕立ての良いジャケットまで。 これからの季節の主役になる、厳選したアウターが揃いました。</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- 4つ目の記事 -->
+                    <article class="all-pickup-card">
+                        <a href="news-jeans.html">
+                            <div class="card-img">
+                                <img src="images/pickup-4.jpg" alt="はじめてのVintage T-shirt">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">はじめてのVintage T-shirt</h3>
+                                <p class="card-text">クリーンなスタイリングに映える味わい深い一着。 初めての古着としても取り入れやすいアイテムを集めました。</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- 5つ目の記事 -->
+                    <article class="all-pickup-card">
+                        <a href="news-jeans.html">
+                            <div class="card-img">
+                                <img src="images/pickup-5.jpg" alt="【レディース】ヨーロッパヴィンテージ風スタイル">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">【レディース】ヨーロッパヴィンテージ風スタイル</h3>
+                                <p class="card-text">ヨーロッパの日常に溶け込むような、シンプルながらどこか雰囲気のある着こなしを集めました。</p>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+                <div class="pickup-footer-area">
+                    <div class="back-link">
+                        <a href="index.html">← トップページに戻る</a>
+                    </div>
+                    <div class="pagination">
+                        <a href="#" class="current">1</a>
+                        <a href="#" class="next">次へ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッターを読み込むための場所 -->
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

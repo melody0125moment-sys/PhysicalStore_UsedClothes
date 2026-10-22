@@ -67,7 +67,7 @@
 }
 
 /* お知らせセクション */
-@media screen and (max-width: 768px) {
+
 
     /* お知らせのグレーボックス部分 */
     .news-box,
@@ -80,7 +80,7 @@
         margin: 0 auto;
         /* 左右中央に配置 */
     }
-}
+
 
 /* コンセプトバナー */
 
@@ -443,3 +443,70 @@
     text-align: left;    
 }
 
+/* ピックアップ一覧pickup.html */
+/* 1. タイトルの横にあるページネーションを一段下げて文字を小さくする */
+.all-pickup-section .pickup-header {
+    display: block;
+    position: relative; /* 線の位置基準にする */
+    padding-left: 0px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: none !important; /* 元の線は消す */
+}
+
+.all-pickup-section .pickup-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw; /* 画面の幅いっぱいに広げる */
+    transform: translateX(-20px); /* 親のパディング分（20px）を相殺して左端に合わせる */
+    border-bottom: 1px solid rgba(86, 79, 101, 0.3);
+}
+
+/* タイトルもカードも、この共通の箱に入れているので一発で幅がピタッと揃います */
+.pickup-inner {
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+.all-pickup-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.all-pickup-section .pagination {
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* 2. カードを1列にしつつ「画像：左、文章：右」の横並びにする */
+.all-pickup-grid {
+    grid-template-columns: 1fr;
+    gap: 40px; /* カードとカードの間の上下の隙間を広げる */
+    padding-left: 70px;
+    padding-right: 30px;
+}
+
+.pickup-card a {
+    display: block; /* 横並びを解除 */
+}
+
+.pickup-card .card-img {
+    width: 100%;    /* 画像を元の横幅いっぱいに戻す */
+    margin-bottom: 10px;
+}
+
+/* 3. スマホ用の文字サイズ調整 */
+.pickup-card .card-title {
+    font-size: 13px;        /* カードタイトルの文字を小さく */
+    margin-bottom: 4px;
+}
+
+.pickup-card .card-text {
+    font-size: 11px;        /* 説明文の文字を小さく */
+    line-height: 1.4;
+}
