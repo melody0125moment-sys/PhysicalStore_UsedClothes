@@ -15,19 +15,28 @@
     /* 文字間隔も少しだけ詰める */
 }
 
-/* メニュー設定 */
+.back-link {
+    margin-bottom: 20px; /* ★「トップページに戻る」の下にしっかり余白を空ける */
+}
+
+.back-link a {
+    font-size: 10px; /* ★文字サイズを小さく控えめにする（お好みで12px〜14pxに調整） */
+}
+
 /* メニュー設定 */
 @media screen and (max-width: 768px) {
     .global-menu {
         width: 100%;
         /* スマホでは横幅いっぱいに広げる */
         right: -100%;
-        
+
         /* ★追加：下の隙間を埋めるための設定（min-heightなら上のナビバーを隠しません！） */
         min-height: 100vh;
         min-height: 100dvh;
-        background-color: #1a1936; /* 背景の紺色をしっかり敷き詰める */
+        background-color: #1a1936;
+        /* 背景の紺色をしっかり敷き詰める */
     }
+
     .global-menu.active {
         right: 0;
     }
@@ -174,23 +183,29 @@
 /* スマホでも3つ横並びをキープする */
 .info-banners-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3列を維持 */
-    gap: 8px;                              /* スマホなので隙間を少し狭くすっきりさせる */
-    padding: 0 10px;                       /* 画面の端に少し余白を持たせる */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3列を維持 */
+    gap: 8px;
+    /* スマホなので隙間を少し狭くすっきりさせる */
+    padding: 0 10px;
+    /* 画面の端に少し余白を持たせる */
 }
 
 /* バナーの高さを縦長（お好みのバランス）にする */
 .info-banner-link {
-    height: 170px;                         /* 縦長の比率に合わせて高さを調整 */
+    height: 170px;
+    /* 縦長の比率に合わせて高さを調整 */
     border-radius: 2px;
-    overflow: hidden; /* 拡大したときに枠からはみ出た部分を隠す */
+    overflow: hidden;
+    /* 拡大したときに枠からはみ出た部分を隠す */
     /* ズームのなめらかさ */
     transition: transform 0.4s ease;
 }
 
 /* バナーの文字ベース設定 */
 .info-banner-text {
-    font-size: 11px;                       /* スマホ幅に合わせて文字をコンパクトに */
+    font-size: 11px;
+    /* スマホ幅に合わせて文字をコンパクトに */
     letter-spacing: 0.5px;
     line-height: 1.4;
     width: 100%;
@@ -204,14 +219,18 @@
     line-height: 1.4;
     width: 100%;
     box-sizing: border-box;
-    text-align: left;      /* すべて左揃え */
-    padding-left: 10px;    /* 左端から少し内側に配置 */
-    
+    text-align: left;
+    /* すべて左揃え */
+    padding-left: 10px;
+    /* 左端から少し内側に配置 */
+
 }
+
 /* ホバー時（またはスマホでタップしたとき）にふんわりズームする */
 .info-banner-link:hover,
 .info-banner-link:active {
-    transform: scale(1.05);        /* 新着商品と同じ1.05倍にズーム！ */
+    transform: scale(1.05);
+    /* 新着商品と同じ1.05倍にズーム！ */
 }
 
 /* スマホのときだけ改行タグ（<br class="sp-br">）を有効にする */
@@ -222,56 +241,73 @@
 /* スマホで「押している間（タップ中）」にホバー演出を効かせる設定 */
 .info-banner-link:active .info-banner-overlay,
 .info-banner-link:hover .info-banner-overlay {
-    background-color: rgba(0, 0, 0, 0.25); /* タップしたときにふわっと明るくなる */
+    background-color: rgba(0, 0, 0, 0.25);
+    /* タップしたときにふわっと明るくなる */
 }
 
 /* SNSバナー */
 
+/* スマホ版のとき、SNSセクション全体に背景色と下の余白をしっかり持たせる */
+.sns-section {
+    background-color: #e8e8e0;
+    padding-bottom: 100px; /* フッター手前の余白をここで確保する */
+}
+
 /* 1. PC用の2列グリッドを解除して、縦1列（1カラム）にする */
 .sns-container {
     display: flex;
-    flex-direction: column; /* 縦に並べる */
-    gap: 75px;              /* カード同士の隙間 */
-    padding: 0;        /* 画面の左右に綺麗な余白を持たせる */
+    flex-direction: column;
+    /* 縦に並べる */
+    gap: 75px;
+    /* カード同士の隙間 */
+    padding: 0;
+    /* 画面の左右に綺麗な余白を持たせる */
 }
 
 /* 2. SNSカードの高さをスマホ用に最適化 */
 .sns-card {
     width: 100%;
-    height: 150px;          /* スマホに合わせて少しコンパクトにする（お好みで140〜160px） */
+    height: 150px;
+    /* スマホに合わせて少しコンパクトにする（お好みで140〜160px） */
 }
 
 /* 3. 中の半透明グレーボックスの調整 */
 .sns-box {
-    padding: 15px 16px;     /* スマホでも窮屈にならないよう内側余白を調整 */
-    gap: 18px;              /* アイコン側と文字側の隙間を少し詰める */
+    padding: 15px 16px;
+    /* スマホでも窮屈にならないよう内側余白を調整 */
+    gap: 18px;
+    /* アイコン側と文字側の隙間を少し詰める */
 }
 
 .sns-box-left {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* ★中央寄せを解除して「左寄せ」にする */
+    align-items: flex-start;
+    /* ★中央寄せを解除して「左寄せ」にする */
     justify-content: center;
-    min-width: auto;         /* 固定幅をリセットして自然に左へ */
+    min-width: auto;
+    /* 固定幅をリセットして自然に左へ */
 }
 
 /* 4. アイコン周り */
 /* インスタアイコン */
 .sns-icon {
-    width: 40px;            
+    width: 40px;
     height: 40px;
     margin-bottom: 8px;
 }
+
 /* LINEアイコン */
 .line-icon {
-    width: 52px;           
+    width: 52px;
     height: 52px;
     margin-bottom: 4px;
 }
 
 .sns-account {
     font-size: 10px;
-    text-align: center;     /* アカウント名も中央でアイコンの真下に配置 */
+    text-align: center;
+    /* アカウント名も中央でアイコンの真下に配置 */
     width: 100%;
 }
 
@@ -280,23 +316,28 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;    /* ★幅いっぱいに引き伸ばす */
+    align-items: stretch;
+    /* ★幅いっぱいに引き伸ばす */
     padding-right: 0;
 }
 
 /* 5. テキスト周り */
 .sns-title {
-    width: 100%;            /* ボックスの幅に合わせて線を長く引く */
+    width: 100%;
+    /* ボックスの幅に合わせて線を長く引く */
     box-sizing: border-box;
-    font-size: 14px;        /* タイトル文字サイズをスマホ用に調整 */
+    font-size: 14px;
+    /* タイトル文字サイズをスマホ用に調整 */
     padding-bottom: 6px;
     margin-bottom: 8px;
-    border-bottom: 1px solid #564F65; /* 下線 */
+    border-bottom: 1px solid #564F65;
+    /* 下線 */
     text-align: center;
 }
 
 .sns-desc {
-    font-size: 10.5px;      /* 説明文も読みやすい大きさに */
+    font-size: 10.5px;
+    /* 説明文も読みやすい大きさに */
     line-height: 1.4;
 }
 
@@ -307,12 +348,14 @@
 
 .sns-card:hover,
 .sns-card:active {
-    transform: scale(1.02); /* タップ時にほんのり拡大 */
+    transform: scale(1.02);
+    /* タップ時にほんのり拡大 */
 }
 
 /* フッター全体：上部の広すぎる余白をキュッとスリムにする */
 .site-footer {
-    padding: 200px 20px 20px 20px; /* 上下の余白をスマホ用にコンパクトに調整 */
+    padding: 50px 20px 20px 20px;
+    background: #1a1936; /* ★スマホ版ではグラデーションを消して単色にする */
 }
 
 /* ロゴを非表示にする場合 */
@@ -322,32 +365,58 @@
 
 /* 左右並びを解除して、縦並び（1カラム）にする */
 .footer-container {
-    flex-direction: column;       /* 縦方向に並べる */
-    align-items: center;          /* すべて中央揃えにする */
-    gap: 40px;                    /* ロゴとメニューの間の隙間 */
+    flex-direction: column;
+    /* 縦方向に並べる */
+    align-items: center;
+    /* すべて中央揃えにする */
+    gap: 40px;
+    /* ロゴとメニューの間の隙間 */
 }
 
 /* リンクメニュー全体のブロック */
 .footer-links {
-    margin-right: 0;              /* ズレをリセット */
+    margin-right: 0;
+    /* ズレをリセット */
     width: 100%;
 }
 
 /* メニューを「縦に1列」にして中央に並べる */
 .footer-menu {
     display: flex;
-    flex-direction: column;       /* 縦1列にする */
-    align-items: left;          /* 中央揃え */
-    gap: 20px;                    /* メニュー同士の縦の間隔 */
+    flex-direction: column;
+    /* 縦1列にする */
+    align-items: left;
+    /* 中央揃え */
+    gap: 20px;
+    /* メニュー同士の縦の間隔 */
 }
 
 /* メニューの文字 */
 .footer-menu li a {
-    font-size: 14px;              /* スマホに合わせて少しスリムに */
+    font-size: 14px;
+    /* スマホに合わせて少しスリムに */
     letter-spacing: 1px;
 }
 
 /* コピーライトのスマホ用調整（右寄せ ＆ さらに小さく） */
 .footer-copyright {
-    font-size: 8px;             /* ★スマホではもっと小さくスッキリさせる */
+    font-size: 8px;
+    /* ★スマホではもっと小さくスッキリさせる */
+}
+
+/* お知らせの中身 */
+@media screen and (max-width: 768px) {
+
+    /* スマホ画面のときに、お知らせ本文の文字や余白を調整する */
+    .news-detail-container {
+        padding: 20px !important;
+        /* 周りの余白を少しスッキリさせる */
+    }
+
+    .news-detail-container p,
+    .news-detail-container li {
+        font-size: 14px;
+        /* スマホで大きすぎる場合は文字サイズを微調整 */
+    }
+
 }

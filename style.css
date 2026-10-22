@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f8f8f8;
@@ -13,6 +18,10 @@ body {
 
 html, body {
     overflow-x: hidden; /* ★画面の横幅をはみ出た分を隠して、スキマを消す */
+}
+
+.back-link a {
+    font-size: 13px; /* お好みで 13px や 12px などに調整してください */
 }
 
 /* ヘッダー全体（画面上部に固定） */
@@ -915,3 +924,66 @@ html, body {
     margin-bottom: 0;
 }
 
+/* お知らせ詳細 */
+/* 全体の背景と余白 */
+.news-detail-section {
+    background-color: #e8e8e0;
+    padding: 140px 20px 80px 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* 中央のグレー角丸ボックス */
+.news-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #dcdfe6;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+/* タイトルと日付エリア */
+.news-detail-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(86, 79, 101, 0.5);
+    padding-bottom: 20px;
+}
+
+.news-detail-header h1 {
+    font-size: 20px;
+    /* font-family: serif; */
+    color: #564F65;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.news-detail-header span {
+    font-size: 12px;
+    color: #7a7585;
+    /* font-family: serif; */
+}
+
+/* 本文エリア */
+.news-detail-body {
+    font-size: 14px;
+    /* font-family: serif; */
+    color: #564F65;
+    line-height: 1.8;
+}
+
+.news-detail-body p {
+    margin-bottom: 20px;
+}
+
+.news-detail-body .schedule-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-detail-body ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
