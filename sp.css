@@ -1,5 +1,6 @@
 body {
-    padding-top: 57px; /* 固定ヘッダーの高さ分を常に確保する */
+    padding-top: 57px;
+    /* 固定ヘッダーの高さ分を常に確保する */
 }
 
 /* スマホのときだけ適用する（画面幅768px以下） */
@@ -20,11 +21,13 @@ body {
 }
 
 .back-link {
-    margin-bottom: 20px; /* ★「トップページに戻る」の下にしっかり余白を空ける */
+    margin-bottom: 20px;
+    /* ★「トップページに戻る」の下にしっかり余白を空ける */
 }
 
 .back-link a {
-    font-size: 10px; /* ★文字サイズを小さく控えめにする（お好みで12px〜14pxに調整） */
+    font-size: 10px;
+    /* ★文字サイズを小さく控えめにする（お好みで12px〜14pxに調整） */
 }
 
 /* メニュー設定 */
@@ -73,17 +76,17 @@ body {
 /* お知らせセクション */
 
 
-    /* お知らせのグレーボックス部分 */
-    .news-box,
-    .info-box,
-    .news-container {
-        width: 95%;
-        /* 画面幅に対して少し余裕を持たせる（例: 90%や88%など） */
-        max-width: 360px;
-        /* 広がりすぎないように最大幅を制限 */
-        margin: 0 auto;
-        /* 左右中央に配置 */
-    }
+/* お知らせのグレーボックス部分 */
+.news-box,
+.info-box,
+.news-container {
+    width: 95%;
+    /* 画面幅に対して少し余裕を持たせる（例: 90%や88%など） */
+    max-width: 360px;
+    /* 広がりすぎないように最大幅を制限 */
+    margin: 0 auto;
+    /* 左右中央に配置 */
+}
 
 
 /* コンセプトバナー */
@@ -236,7 +239,9 @@ body {
     transform: scale(1.05);
     /* 新着商品と同じ1.05倍にズーム！ */
 }
-
+.pc-br {
+        display: none;
+    }
 /* スマホのときだけ改行タグ（<br class="sp-br">）を有効にする */
 .sp-br {
     display: inline;
@@ -254,7 +259,8 @@ body {
 /* スマホ版のとき、SNSセクション全体に背景色と下の余白をしっかり持たせる */
 .sns-section {
     background-color: #e8e8e0;
-    padding-bottom: 100px; /* フッター手前の余白をここで確保する */
+    padding-bottom: 100px;
+    /* フッター手前の余白をここで確保する */
 }
 
 /* 1. PC用の2列グリッドを解除して、縦1列（1カラム）にする */
@@ -359,7 +365,8 @@ body {
 /* フッター全体：上部の広すぎる余白をキュッとスリムにする */
 .site-footer {
     padding: 50px 20px 20px 20px;
-    background: #1a1936; /* ★スマホ版ではグラデーションを消して単色にする */
+    background: #1a1936;
+    /* ★スマホ版ではグラデーションを消して単色にする */
 }
 
 /* ロゴを非表示にする場合 */
@@ -412,17 +419,18 @@ body {
 .news-detail-section {
     padding-top: 40px !important;
 }
-/* スマホ画面のときに、お知らせ本文の文字や余白を調整する */
-    .news-detail-container {
-        padding: 10px 20px 20px 20px;
-        /* 周りの余白を少しスッキリさせる */
-    }
 
-    .news-detail-container p,
-    .news-detail-container li {
-        font-size: 14px;
-        /* スマホで大きすぎる場合は文字サイズを微調整 */
-    }
+/* スマホ画面のときに、お知らせ本文の文字や余白を調整する */
+.news-detail-container {
+    padding: 10px 20px 20px 20px;
+    /* 周りの余白を少しスッキリさせる */
+}
+
+.news-detail-container p,
+.news-detail-container li {
+    font-size: 14px;
+    /* スマホで大きすぎる場合は文字サイズを微調整 */
+}
 
 
 /* コンセプト詳細：about.html */
@@ -430,31 +438,37 @@ body {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
+
 /* ショップコンセプトテキスト */
 .shop-concept {
-    padding: 50px 20px; /* 左右に20pxのパディングを入れて画面端に文字がくっつくのを防ぐ */
+    padding: 50px 20px;
+    /* 左右に20pxのパディングを入れて画面端に文字がくっつくのを防ぐ */
 }
 
 .concept-subtitle {
     font-size: 16px;
     color: #443B57;
-    line-height: 1.8;      /* 行間を少しゆったりさせる */
+    line-height: 1.8;
+    /* 行間を少しゆったりさせる */
     font-weight: bold;
 }
 
 .concept-text {
     max-width: 320px;
-    font-size: 13px;       /* スマホで読みやすいサイズ */
+    font-size: 13px;
+    /* スマホで読みやすいサイズ */
     color: #443B57;
-    line-height: 2.2;      /* 行間を少し広げて読みやすくする */
-    text-align: left;    
+    line-height: 2.2;
+    /* 行間を少し広げて読みやすくする */
+    text-align: left;
 }
 
 /* ピックアップ一覧pickup.html */
 /* 1. セクション全体のパディング：上部に固定ヘッダー分の余白を開け、左右に綺麗な余白（20px）を持たせる */
 .all-pickup-section {
     background-color: #e8e8e0;
-    padding: 30px 20px 40px 20px !important; /* 上を広めにとって見切れを防止、左右に20pxの余白 */
+    padding: 30px 20px 40px 20px !important;
+    /* 上を広めにとって見切れを防止、左右に20pxの余白 */
     width: 100%;
     box-sizing: border-box;
 }
@@ -474,8 +488,10 @@ body {
     margin-bottom: 30px;
     border-bottom: 1px solid rgba(86, 79, 101, 0.3);
     padding-bottom: 15px;
-    padding-left: 15px;  /* タイトルが端から少し離れるように */
-    padding-right: 15px; /* 線が両端から少し内側で止まるようにする */
+    padding-left: 15px;
+    /* タイトルが端から少し離れるように */
+    padding-right: 15px;
+    /* 線が両端から少し内側で止まるようにする */
     box-sizing: border-box;
 }
 
@@ -498,8 +514,10 @@ body {
 
 /* 5. 下部のエリア（トップページへ戻る ＆ ページネーション） */
 .pickup-footer-area {
-    padding-left: 15px;  /* 「トップページへ戻る」を少し右へ（左にパディング） */
-    padding-right: 15px; /* 右側のページネーションの位置を上の段と揃える */
+    padding-left: 15px;
+    /* 「トップページへ戻る」を少し右へ（左にパディング） */
+    padding-right: 15px;
+    /* 右側のページネーションの位置を上の段と揃える */
     box-sizing: border-box;
     margin-top: 40px;
 }
@@ -515,22 +533,51 @@ body {
     justify-content: flex-end !important;
     font-size: 12px;
 }
+
 .pickup-card a {
-    display: block; /* 横並びを解除 */
+    display: block;
+    /* 横並びを解除 */
 }
 
 .pickup-card .card-img {
-    width: 100%;    /* 画像を元の横幅いっぱいに戻す */
+    width: 100%;
+    /* 画像を元の横幅いっぱいに戻す */
     margin-bottom: 10px;
 }
 
 /* 3. スマホ用の文字サイズ調整 */
 .pickup-card .card-title {
-    font-size: 13px;        /* カードタイトルの文字を小さく */
+    font-size: 13px;
+    /* カードタイトルの文字を小さく */
     margin-bottom: 4px;
 }
 
 .pickup-card .card-text {
-    font-size: 11px;        /* 説明文の文字を小さく */
+    font-size: 11px;
+    /* 説明文の文字を小さく */
     line-height: 1.4;
+}
+
+/* ピックアップ詳細（pickup-1～5） */
+/* スマホ表示時は縦並びにする */
+.pickup-detail-section {
+    padding: 20px 30px 40px 30px;
+}
+
+.pickup-detail-content {
+    flex-direction: column;
+    gap: 25px;
+}
+
+.pickup-detail-image {
+    max-width: 100%;
+}
+.pickup-detail-image img { /* 中央に寄せたい画像のセレクタを指定 */
+        display: block;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+.pickup-detail-title {
+    font-size: 20px;
+    margin-bottom: 20px;
 }
