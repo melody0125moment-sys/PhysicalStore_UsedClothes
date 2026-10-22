@@ -149,8 +149,6 @@ html, body {
 
 /* メインビジュアル（ヒーローセクション） */
 .hero {
-    margin-top: 55px;
-    /* ヘッダーの高さ分、上をあける */
     height: 80vh;
     /* 画面高さの約80%の高さにする */
     background-image: url('images/hero-bg.jpg');
@@ -928,7 +926,7 @@ html, body {
 /* 全体の背景と余白 */
 .news-detail-section {
     background-color: #e8e8e0;
-    padding: 140px 20px 80px 20px;
+    padding: 100px 20px 80px 20px;
     box-sizing: border-box;
     width: 100%;
 }
@@ -985,7 +983,11 @@ html, body {
     margin-bottom: 20px;
 }
 
-/* コンセプト詳細：concept.html */
+/* コンセプト詳細：about.html */
+body:has(.about-banner-overlay) .concept-banner-section {
+    padding-top: 57px;
+    margin-top: 0;
+}
 /* ホバーしないコンセプトページ専用のオーバーレイ */
 .about-banner-overlay {
     width: 100%;

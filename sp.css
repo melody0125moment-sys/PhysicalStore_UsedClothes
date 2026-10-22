@@ -1,3 +1,7 @@
+body {
+    padding-top: 57px; /* 固定ヘッダーの高さ分を常に確保する */
+}
+
 /* スマホのときだけ適用する（画面幅768px以下） */
 .hero {
     height: 60vh;
@@ -45,7 +49,7 @@
 /* ヒーローセクション */
 @media screen and (max-width: 768px) {
     .hero {
-        height: 40vh;
+        height: 25vh;
         /* スマホでは高さを少し抑えてスッキリ見せる（60vh〜70vhくらいがおすすめ） */
     }
 
@@ -86,7 +90,7 @@
 
 /* バナーの高さを少し縮める（PCの300pxから調整） */
 .concept-banner-link {
-    height: 200px;
+    height: 100px;
     /* お好みで 180px 〜 220px くらいに調整可能 */
 }
 
@@ -405,11 +409,12 @@
 }
 
 /* お知らせの中身 */
-@media screen and (max-width: 768px) {
-
-    /* スマホ画面のときに、お知らせ本文の文字や余白を調整する */
+.news-detail-section {
+    padding-top: 40px !important;
+}
+/* スマホ画面のときに、お知らせ本文の文字や余白を調整する */
     .news-detail-container {
-        padding: 20px !important;
+        padding: 10px 20px 20px 20px;
         /* 周りの余白を少しスッキリさせる */
     }
 
@@ -419,10 +424,12 @@
         /* スマホで大きすぎる場合は文字サイズを微調整 */
     }
 
+
+/* コンセプト詳細：about.html */
+.concept-banner-section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
-
-/* コンセプト詳細：concept.html */
-
 /* ショップコンセプトテキスト */
 .shop-concept {
     padding: 50px 20px; /* 左右に20pxのパディングを入れて画面端に文字がくっつくのを防ぐ */
@@ -444,53 +451,70 @@
 }
 
 /* ピックアップ一覧pickup.html */
-/* 1. タイトルの横にあるページネーションを一段下げて文字を小さくする */
-.all-pickup-section .pickup-header {
-    display: block;
-    position: relative; /* 線の位置基準にする */
-    padding-left: 0px;
-    padding-right: 20px;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-    border-bottom: none !important; /* 元の線は消す */
-}
-
-.all-pickup-section .pickup-header::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw; /* 画面の幅いっぱいに広げる */
-    transform: translateX(-20px); /* 親のパディング分（20px）を相殺して左端に合わせる */
-    border-bottom: 1px solid rgba(86, 79, 101, 0.3);
-}
-
-/* タイトルもカードも、この共通の箱に入れているので一発で幅がピタッと揃います */
-.pickup-inner {
-    padding-left: 0;
-    padding-right: 0;
-    box-sizing: border-box;
+/* 1. セクション全体のパディング：上部に固定ヘッダー分の余白を開け、左右に綺麗な余白（20px）を持たせる */
+.all-pickup-section {
+    background-color: #e8e8e0;
+    padding: 30px 20px 40px 20px !important; /* 上を広めにとって見切れを防止、左右に20pxの余白 */
     width: 100%;
+    box-sizing: border-box;
 }
+
+/* コンテナも幅いっぱいにしつつ安全に */
 .all-pickup-container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.all-pickup-section .pagination {
+/* 2. タイトルとボーダーのエリア：左右に少し内側に入るようパディングを設定して「線を少し短く」する */
+.all-pickup-header {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(86, 79, 101, 0.3);
+    padding-bottom: 15px;
+    padding-left: 15px;  /* タイトルが端から少し離れるように */
+    padding-right: 15px; /* 線が両端から少し内側で止まるようにする */
+    box-sizing: border-box;
+}
+
+/* 3. 上のページネーションを下の段に落として右端（上のボーダーの右端）に綺麗に合わせる */
+.all-pickup-header .pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
     font-size: 12px;
-    margin-top: 10px;
-    text-align: right;
 }
 
-/* 2. カードを1列にしつつ「画像：左、文章：右」の横並びにする */
+/* 4. 下のカード群：左右の余白をヘッダーと綺麗に合わせる */
 .all-pickup-grid {
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
     grid-template-columns: 1fr;
-    gap: 40px; /* カードとカードの間の上下の隙間を広げる */
-    padding-left: 70px;
-    padding-right: 30px;
+    gap: 40px;
 }
 
+/* 5. 下部のエリア（トップページへ戻る ＆ ページネーション） */
+.pickup-footer-area {
+    padding-left: 15px;  /* 「トップページへ戻る」を少し右へ（左にパディング） */
+    padding-right: 15px; /* 右側のページネーションの位置を上の段と揃える */
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+
+/* トップページに戻るリンク */
+.pickup-footer-area .back-link {
+    margin-bottom: 20px;
+}
+
+/* 下部のページネーションを右寄せにして上の段と左右差を合わせる */
+.pickup-footer-area .pagination {
+    display: flex !important;
+    justify-content: flex-end !important;
+    font-size: 12px;
+}
 .pickup-card a {
     display: block; /* 横並びを解除 */
 }

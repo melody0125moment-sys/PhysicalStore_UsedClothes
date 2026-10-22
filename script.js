@@ -49,4 +49,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (menuOverlay) {
         menuOverlay.addEventListener('click', toggleMenu);
     }
+    if (globalMenu) {
+        globalMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    }
 });
