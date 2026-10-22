@@ -953,7 +953,6 @@ html, body {
 
 .news-detail-header h1 {
     font-size: 20px;
-    /* font-family: serif; */
     color: #564F65;
     margin-bottom: 8px;
     font-weight: bold;
@@ -962,13 +961,11 @@ html, body {
 .news-detail-header span {
     font-size: 12px;
     color: #7a7585;
-    /* font-family: serif; */
 }
 
 /* 本文エリア */
 .news-detail-body {
     font-size: 14px;
-    /* font-family: serif; */
     color: #564F65;
     line-height: 1.8;
 }
@@ -987,3 +984,111 @@ html, body {
     padding-left: 0;
     margin-bottom: 20px;
 }
+
+/* コンセプト詳細：concept.html */
+/* ホバーしないコンセプトページ専用のオーバーレイ */
+.about-banner-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transitionやホバーの記述はあえて書かない！ */
+}
+
+/* ショップコンセプトセクション */
+.shop-concept {
+    padding: 80px 20px;
+    text-align: center;
+    font-family: serif;
+    color:#443B57;
+    background-color: #e8e8e0;
+}
+
+.shop-concept h2 {
+    font-size: 22px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.concept-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.concept-text {
+    font-size: 14px;
+    line-height: 2.5;
+    color: #333333;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: serif;
+    color:#443B57;
+    padding-bottom: 100px;
+    border-bottom: 1px solid rgba(86, 79, 101, 0.5);
+}
+
+
+
+/* Informationセクション全体の枠組み */
+/* 1. 一番外側の枠：画面いっぱいに背景色を敷く */
+.shop-info-section {
+    width: 100%;
+    background-color: #e8e8e0;
+    padding: 40px 20px;       /* 上下にしっかり余白をとる */
+}
+
+/* 2. Informationの見出し */
+.shop-info-section h2 {
+    text-align: center;       
+    color: #443B57;           
+    font-size: 22px;
+    font-family: serif; 
+    margin-bottom: 40px;      /* ★下との間隔をしっかり空ける */
+}
+
+/* 3. 中身のコンテンツ枠：ここで横幅を絞って画面中央に寄せる */
+.info-content-wrapper {
+    max-width: 900px;         /* 中身の横幅 */
+    margin: 0 auto;           /* 画面中央に配置 */
+}
+
+/* 4. 左側のテキスト＆マップエリア */
+/* 左側のテキスト＆マップエリアをまとめる親枠 */
+.info-left {
+    max-width: 500px; /* ★好みに応じて幅を狭めると、より中央に寄ります */
+    margin: 0 auto;   /* ★これでブロック全体が中央に配置されます */
+}
+
+/* リスト自体の文字は左揃えにする */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left; /* 文字自体は左揃え */
+}
+
+.info-list li {
+    font-size: 14px;
+    color: #443B57;
+    line-height: 2.2;         /* 行間をゆったり開ける */
+}
+
+.google-map iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 4px; /* お好みで角を丸く */
+    display: block;
+}
+
+/* 架空サイトの※注意書きスタイル */
+.fictitious-note {
+    text-align: center;
+    font-size: 12px;
+    color: #665F75;       /* メインの文字色（#443B57）より少し薄めの落ち着いた色 */
+    margin-top: 25px;     /* マップとの間の余白 */
+    letter-spacing: 1px;
+}
+

@@ -420,3 +420,26 @@
     }
 
 }
+
+/* コンセプト詳細：concept.html */
+
+/* ショップコンセプトテキスト */
+.shop-concept {
+    padding: 50px 20px; /* 左右に20pxのパディングを入れて画面端に文字がくっつくのを防ぐ */
+}
+
+.concept-subtitle {
+    font-size: 16px;
+    color: #443B57;
+    line-height: 1.8;      /* 行間を少しゆったりさせる */
+    font-weight: bold;
+}
+
+.concept-text {
+    max-width: 320px;
+    font-size: 13px;       /* スマホで読みやすいサイズ */
+    color: #443B57;
+    line-height: 2.2;      /* 行間を少し広げて読みやすくする */
+    text-align: left;    
+}
+
