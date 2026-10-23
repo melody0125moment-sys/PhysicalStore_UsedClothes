@@ -1656,3 +1656,173 @@ body:has(.about-banner-overlay) .concept-banner-section {
 .recruit-page .recruit-apply-block {
     margin-top: 45px;
 }
+
+/* お問い合わせページ */
+
+/* 1. タイトルエリア（中央揃え＋下線） */
+.contact-page .contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-page .contact-title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    color: #443B57;
+    padding-bottom: 8px;
+    border-bottom: 1.3px solid rgba(86, 79, 101, 0.3);
+    letter-spacing: 0.05em;
+}
+
+/* 2. コンテンツ部分（左寄せ・文字色統一） */
+.contact-page .contact-content {
+    text-align: left;
+}
+
+.contact-page .contact-lead {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #443B57;
+    margin-bottom: 35px;
+}
+
+.contact-page .contact-block {
+    margin-bottom: 35px;
+}
+
+.contact-page .contact-subheading {
+    font-size: 14px;
+    font-weight: bold;
+    color: #443B57;
+    margin-bottom: 12px;
+}
+
+.contact-page .contact-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #443B57;
+    margin-bottom: 12px;
+}
+
+/* FAQへのリンク */
+.contact-page .contact-link {
+    display: inline-block;
+    font-size: 14px;
+    color: #443B57;
+    text-decoration: underline;
+    margin-top: 4px;
+}
+
+.contact-page .contact-link:hover {
+    opacity: 0.7;
+}
+
+/* 注意事項のリスト */
+.contact-page .contact-list {
+    list-style: disc inside;
+    padding-left: 0;
+    margin: 0 0 25px 0;
+}
+
+.contact-page .contact-list li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #443B57;
+    margin-bottom: 6px;
+}
+
+/* 箇条書きの改行後も文字位置をきれいに揃える設定 */
+.contact-list li,
+.recruit-list li {
+    list-style-type: disc;
+    list-style-position: outside; /* 外側に配置してインデントで綺麗に揃える */
+    margin-left: 1.2em;           /* 全体の左マージン */
+    padding-left: 0.3em;
+    text-indent: 0;
+}
+
+/* LINEボタンのスタイル（テキスト風〜シンプルな枠付きボタン） */
+.contact-page .contact-btn-wrapper {
+    margin-top: 20px;
+}
+
+.contact-page .contact-line-btn {
+    display: inline-block;
+    font-size: 14px;
+    color: #443B57;
+    text-decoration: none;
+    border: 1px solid #443B57;
+    padding: 10px 20px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.contact-page .contact-line-btn:hover {
+    background-color: #443B57;
+    color: #ffffff;
+}
+
+/* プライバシーポリシー */
+
+/* 1. タイトルエリア */
+.privacy-page .privacy-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.privacy-page .privacy-title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    color: #443B57;
+    padding-bottom: 8px;
+    border-bottom: 1.3px solid rgba(86, 79, 101, 0.3);
+    letter-spacing: 0.05em;
+}
+
+/* 2. コンテンツ（左寄せ） */
+.privacy-page .privacy-content {
+    text-align: left;
+}
+
+.privacy-page .privacy-lead {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #443B57;
+    margin-bottom: 35px;
+}
+
+.privacy-page .privacy-block {
+    margin-bottom: 30px;
+}
+
+.privacy-page .privacy-subheading {
+    font-size: 14px;
+    font-weight: bold;
+    color: #443B57;
+    margin-bottom: 10px;
+}
+
+.privacy-page .privacy-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #443B57;
+    margin-bottom: 8px;
+}
+
+/* 3. 箇条書きリスト（改行時インデント崩れ対策済み） */
+.privacy-page .privacy-list {
+    margin: 0;
+    padding-left: 0;
+}
+
+.privacy-page .privacy-list li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #443B57;
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 1.2em;
+    padding-left: 0.3em;
+    margin-bottom: 4px;
+}
