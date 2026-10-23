@@ -20,12 +20,17 @@ html, body {
     overflow-x: hidden; /* ★画面の横幅をはみ出た分を隠して、スキマを消す */
 }
 
-.back-link a {
-    font-size: 13px; 
+.back-link {
+    color: #443b57;
+    text-decoration: underline;
+    font-size: 13px;
+    margin-bottom: 30px;
 }
 .pc-br {
     display: inline;
 }
+
+
 
 
 /* ヘッダー全体（画面上部に固定） */
@@ -452,34 +457,29 @@ html, body {
     flex-direction: column;
 }
 
-/* 商品画像エリア */
-.product-image-link {
-    display: block;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    /* 正方形に揃える */
-    overflow: hidden;
-    margin-bottom: 12px;
-    background-color: #f0f0f0;
-}
-
-.product-image-link img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.product-image-link:hover img {
-    transform: scale(1.05);
-    /* ホバー時にほんのりズーム */
-}
 
 /* 商品情報テキストエリア */
 .product-info {
     font-size: 13px;
     color: #564F65;
     line-height: 1.5;
+}
+
+/* 商品画像エリア（クリック不可・ホバーなし） */
+.product-image-wrap {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 正方形に揃える */
+    overflow: hidden;
+    margin-bottom: 12px;
+    background-color: #f0f0f0;
+}
+
+.product-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* transition や :hover の設定はすべて削除 */
 }
 
 /* 価格 */
@@ -1113,11 +1113,6 @@ body:has(.about-banner-overlay) .concept-banner-section {
     margin: 0 auto;
 }
 
-/* トップページに戻るリンク */
-.back-link {
-    margin-bottom: 25px;
-}
-
 /* タイトルとページネーションを横並びにするエリア */
 .all-pickup-header {
     display: flex;
@@ -1126,6 +1121,10 @@ body:has(.about-banner-overlay) .concept-banner-section {
     margin-bottom: 30px;
     border-bottom: 1px solid rgba(86, 79, 101, 0.3);
     padding-bottom: 15px;
+}
+.all-pickup-title {
+ font-size: 18px;
+ font-weight: normal;
 }
 
 /* ページネーション */
@@ -1213,14 +1212,10 @@ body:has(.about-banner-overlay) .concept-banner-section {
     margin: 0 auto;
 }
 
+
+
 .back-link-wrapper {
     margin-bottom: 30px;
-}
-
-.back-link {
-    color: #443b57;
-    text-decoration: underline;
-    font-size: 14px;
 }
 
 /* 左右2カラムレイアウト */
@@ -1277,4 +1272,66 @@ body:has(.about-banner-overlay) .concept-banner-section {
     padding-left: 20px;
     font-size: 14px;
     line-height: 1.8;
+}
+
+/* 1つ目の文章の下に配置する画像のスタイル */
+.section-inline-image {
+    margin: 20px 0; /* 上下の余白 */
+    max-width: 50%;
+}
+
+.section-inline-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px; /* お好みで角丸 */
+}
+
+/* 新着入荷商品一覧　new-arrivals.html */
+
+.all-arrivals-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(86, 79, 101, 0.3);
+    padding-bottom: 15px;
+}
+.all-arrivals-title {
+ font-size: 18px;
+ font-weight: normal;
+}
+
+.all-arrivals-section {
+    background-color: #e8e8e0;
+    padding: 80px 80px 20px 20px; /* 下に余裕を持たせて下のページやフッターへ自然に繋げる */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 中央寄せコンテナ */
+.all-arrivals-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* タイトルとページネーションを横並びにするエリア */
+.all-arrivals-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(86, 79, 101, 0.3);
+    padding-bottom: 15px;
+}
+.all-arrivals-title {
+ font-size: 18px;
+ font-weight: normal;
+}
+
+.all-arrivals-footer-area {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between; /* 左右の端にそれぞれ配置 */
+    align-items: center;
 }

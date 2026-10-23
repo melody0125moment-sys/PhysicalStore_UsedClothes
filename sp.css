@@ -31,47 +31,47 @@ body {
 }
 
 /* メニュー設定 */
-@media screen and (max-width: 768px) {
-    .global-menu {
-        width: 100%;
-        /* スマホでは横幅いっぱいに広げる */
-        right: -100%;
 
-        /* ★追加：下の隙間を埋めるための設定（min-heightなら上のナビバーを隠しません！） */
-        min-height: 100vh;
-        min-height: 100dvh;
-        background-color: #1a1936;
-        /* 背景の紺色をしっかり敷き詰める */
-    }
+.global-menu {
+    width: 100%;
+    /* スマホでは横幅いっぱいに広げる */
+    right: -100%;
 
-    .global-menu.active {
-        right: 0;
-    }
+    /* ★追加：下の隙間を埋めるための設定（min-heightなら上のナビバーを隠しません！） */
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: #1a1936;
+    /* 背景の紺色をしっかり敷き詰める */
 }
+
+.global-menu.active {
+    right: 0;
+}
+
 
 /* ヒーローセクション */
-@media screen and (max-width: 768px) {
-    .hero {
-        height: 25vh;
-        /* スマホでは高さを少し抑えてスッキリ見せる（60vh〜70vhくらいがおすすめ） */
-    }
 
-    /* THRIFT タイトルをスマホ用に縮小 */
-    .hero-title {
-        font-size: 38px;
-        /* 64pxからスマホ用に小さく調整 */
-        letter-spacing: 2px;
-        margin-bottom: 16px;
-    }
-
-    /* キャッチコピーも少し調整 */
-    .hero-subtitle {
-        font-size: 14px;
-        /* 20pxから小さく調整 */
-        letter-spacing: 1px;
-        line-height: 1.6;
-    }
+.hero {
+    height: 25vh;
+    /* スマホでは高さを少し抑えてスッキリ見せる（60vh〜70vhくらいがおすすめ） */
 }
+
+/* THRIFT タイトルをスマホ用に縮小 */
+.hero-title {
+    font-size: 38px;
+    /* 64pxからスマホ用に小さく調整 */
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+/* キャッチコピーも少し調整 */
+.hero-subtitle {
+    font-size: 14px;
+    /* 20pxから小さく調整 */
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
 
 /* お知らせセクション */
 
@@ -239,9 +239,11 @@ body {
     transform: scale(1.05);
     /* 新着商品と同じ1.05倍にズーム！ */
 }
+
 .pc-br {
-        display: none;
-    }
+    display: none;
+}
+
 /* スマホのときだけ改行タグ（<br class="sp-br">）を有効にする */
 .sp-br {
     display: inline;
@@ -572,12 +574,74 @@ body {
 .pickup-detail-image {
     max-width: 100%;
 }
-.pickup-detail-image img { /* 中央に寄せたい画像のセレクタを指定 */
-        display: block;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+
+.pickup-detail-image img {
+    /* 中央に寄せたい画像のセレクタを指定 */
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .pickup-detail-title {
     font-size: 20px;
     margin-bottom: 20px;
+}
+
+/* 新着商品一覧　new-arrivals.html*/
+.all-arrivals-section {
+    background-color: #e8e8e0;
+    padding: 30px 20px 40px 20px !important;
+    /* 上を広めにとって見切れを防止、左右に20pxの余白 */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* コンテナも幅いっぱいにしつつ安全に */
+.all-arrivals-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. タイトルとボーダーのエリア：左右に少し内側に入るようパディングを設定して「線を少し短く」する */
+.all-arrivals-header {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(86, 79, 101, 0.3);
+    padding-bottom: 15px;
+    padding-left: 20px;
+    /* タイトルが端から少し離れるように */
+    padding-right: 20px;
+    /* 線が両端から少し内側で止まるようにする */
+    box-sizing: border-box;
+}
+
+/* 3. 上のページネーションを下の段に落として右端（上のボーダーの右端）に綺麗に合わせる */
+.all-arrivals-header .pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    font-size: 12px;
+}
+
+
+.all-arrivals-section .products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2列に並べる */
+    overflow-x: visible;
+    /* 横スクロールを解除 */
+    scroll-snap-type: none;
+    /* スナップを解除 */
+    gap: 12px;
+    /* カード同士の間隔 */
+}
+
+/* 各カードの幅制限（横スクロール用設定）をリセット */
+.all-arrivals-section .product-card {
+    flex: unset;
+    width: 100%;
+    max-width: none;
 }
