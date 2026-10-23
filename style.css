@@ -462,7 +462,7 @@ html, body {
 .product-info {
     font-size: 13px;
     color: #564F65;
-    line-height: 1.5;
+    line-height: 1.7;
 }
 
 /* 商品画像エリア（クリック不可・ホバーなし） */
@@ -471,7 +471,7 @@ html, body {
     width: 100%;
     aspect-ratio: 1 / 1; /* 正方形に揃える */
     overflow: hidden;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     background-color: #f0f0f0;
 }
 
@@ -481,7 +481,13 @@ html, body {
     object-fit: cover;
     /* transition や :hover の設定はすべて削除 */
 }
-
+/* --- 修正ポイント2：左に寄ってしまうのを防ぐ（中央寄せの確実な適用） --- */
+.products-container {
+    max-width: 1200px;
+    margin: 0 auto; /* 左右自動で中央に配置 */
+    width: 100%;    /* ★幅を100%にして確実にコンテナを効かせる */
+    box-sizing: border-box;
+}
 /* 価格 */
 .product-price {
     font-size: 18px;
@@ -1551,4 +1557,102 @@ body:has(.about-banner-overlay) .concept-banner-section {
     display: flex;
     align-items: flex-start;
     padding: 0 0 20px 0;
+}
+
+/* スタッフ募集　recruit.html */
+
+/* 1. バナー下の余白を確保 */
+.recruit-page .info-banner-wrapper {
+    margin-bottom: 60px;
+}
+
+/* 2. 導入文章エリア（ここだけ中央揃え） */
+
+.recruit-page .recruit-intro {
+    text-align: center;
+    margin-top:50px;
+    margin-bottom: 60px;
+}
+
+.recruit-page .recruit-intro .recruit-subheading {
+    font-size: 15px;
+    font-weight: bold;
+    color: #443B57;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.recruit-page .recruit-intro .recruit-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #443B57;
+    text-align: center;
+}
+
+/* スタッフ募集ページの導入タイトルと本文の間だけ広げる */
+.recruit-page .recruit-intro .recruit-subheading {
+    margin-bottom: 35px; 
+}
+/* 3. 募集要項・応募方法エリア（左寄せ・枠線削除） */
+.recruit-page .recruit-section {
+    border-top: none; /* 上の境界線を撤去 */
+    text-align: left;
+    background-color: #dcdfe6;
+    padding: 30px 20px;
+    margin-top: 30px;
+    border-radius: 6px;
+}
+
+.recruit-page .recruit-section-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #443B57;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.recruit-page .recruit-block {
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.recruit-page .recruit-item-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #443B57;
+    margin-bottom: 6px;
+}
+
+.recruit-page .recruit-item-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #443B57;
+}
+
+/* 4. 箇条書き・番号リスト（左寄せ＋整列） */
+.recruit-page .recruit-list {
+    list-style: disc inside;
+    padding-left: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.recruit-page .recruit-list li,
+.recruit-page .recruit-number-list li {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #443B57;
+    margin-bottom: 4px;
+}
+
+.recruit-page .recruit-number-list {
+    list-style: decimal inside;
+    padding-left: 0;
+    margin: 0;
+    text-align: left;
+}
+
+/* 5. 応募方法ブロックの上の余白（適度な距離感） */
+.recruit-page .recruit-apply-block {
+    margin-top: 45px;
 }
