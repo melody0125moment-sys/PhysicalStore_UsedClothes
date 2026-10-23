@@ -1036,6 +1036,39 @@ body:has(.about-banner-overlay) .concept-banner-section {
     border-bottom: 1px solid rgba(86, 79, 101, 0.5);
 }
 
+/* selectionセクション */
+.shop-selection {
+    padding: 20px 20px;
+    text-align: center;
+    font-family: serif;
+    color:#443B57;
+    background-color: #e8e8e0;
+}
+
+.shop-selection h2 {
+    font-size: 22px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.selection-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.selection-text {
+    font-size: 14px;
+    line-height: 2.5;
+    color: #333333;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: serif;
+    color:#443B57;
+    padding-bottom: 100px;
+    border-bottom: 1px solid rgba(86, 79, 101, 0.5);
+}
+
 
 
 /* Informationセクション全体の枠組み */
@@ -1334,4 +1367,188 @@ body:has(.about-banner-overlay) .concept-banner-section {
     display: flex;
     justify-content: space-between; /* 左右の端にそれぞれ配置 */
     align-items: center;
+}
+
+/* 案内ページ全体 */
+.info-page-section {
+    background-color: #e8e8e0; /* 統一の背景色 */
+    padding: 100px 20px 80px;
+    min-height: calc(100vh - 200px);
+}
+
+.info-page-container {
+    max-width: 800px; /* テキストが読みやすい幅に設定 */
+    margin: 0 auto;
+}
+
+/* バナーの配置・調整 */
+.info-banner-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* バナー部分（既存スタイルの活用＋中央表示用調整） */
+.info-banner-wrapper .info-banner-link {
+    display: block;
+    width: 100%;
+    max-width: 500px; /* ワイヤーフレームに合わせたバナー幅 */
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    pointer-events: none; /* 単なる見出し・ビジュアルとして使う場合 */
+}
+
+.info-banner-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 背景をほんのり暗くして文字を立ち上げ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-banner-text {
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    font-family: serif;
+    text-align: center;
+}
+
+/* 文章・段落デザイン */
+.info-lead-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #443B57;
+    margin-bottom: 35px;
+}
+
+.info-block {
+    margin-bottom: 35px;
+}
+
+.info-subheading {
+    font-size: 15px;
+    font-weight: bold;
+    color: #443B57;
+    margin-bottom: 12px;
+}
+
+.info-block p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #443B57;
+    margin-bottom: 12px;
+}
+
+.info-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.info-link {
+    color: #443b57;
+    text-decoration: underline;
+}
+
+.info-note {
+    font-size: 13px;
+    color: #555555;
+}
+
+/* faqページ　faq.html */
+/* FAQページ（faq-onlyクラスを持つページ）のバナー下だけ間隔を広げる */
+.info-page-section.faq-only .info-banner-wrapper {
+    margin-bottom: 100px; /* お好みで 60px や 70px などに調整してください */
+}
+
+/* カテゴリー見出し */
+.faq-category-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #443b57;
+    margin-bottom: 20px;
+}
+
+/* アコーディオン全体（枠線） */
+.faq-item {
+    border-bottom: 1px solid #d0d0c8;
+    background-color: transparent;
+}
+
+/* 質問エリア（summary） */
+.faq-question {
+    display: flex;
+    align-items: flex-start;
+    padding: 18px 0;
+    cursor: pointer;
+    list-style: none; /* デフォルトの三角マークを消す */
+    position: relative;
+}
+
+/* デフォルトのマーカー（Safari等対策） */
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+/* QとAのラベル（文字が下に回り込まないための固定幅） */
+.faq-label {
+    font-weight: bold;
+    color: #443b57;
+    width: 24px;
+    flex-shrink: 0;
+}
+
+/* 質問・回答のテキスト部分 */
+.faq-text,
+.faq-answer-text {
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #443b57;
+}
+
+/* プラス・マイナスアイコンの表現（CSSで実装） */
+.faq-icon {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+/* プラスの横棒 */
+.faq-icon::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 14px;
+    height: 2px;
+    background-color: #443b57;
+}
+
+/* プラスの縦棒（閉じているときだけ表示してプラスにする） */
+.faq-item:not([open]) .faq-icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 2px;
+    height: 14px;
+    background-color: #443b57;
+}
+
+/* 回答エリア */
+.faq-answer {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 0 20px 0;
 }

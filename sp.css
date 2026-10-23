@@ -465,6 +465,28 @@ body {
     text-align: left;
 }
 
+.shop-selection {
+    padding: 50px 20px;
+    /* 左右に20pxのパディングを入れて画面端に文字がくっつくのを防ぐ */
+}
+
+.selection-subtitle {
+    font-size: 16px;
+    color: #443B57;
+    line-height: 1.8;
+    /* 行間を少しゆったりさせる */
+    font-weight: bold;
+}
+
+.selection-text {
+    max-width: 320px;
+    font-size: 13px;
+    /* スマホで読みやすいサイズ */
+    color: #443B57;
+    line-height: 2.2;
+    /* 行間を少し広げて読みやすくする */
+    text-align: left;
+}
 /* ピックアップ一覧pickup.html */
 /* 1. セクション全体のパディング：上部に固定ヘッダー分の余白を開け、左右に綺麗な余白（20px）を持たせる */
 .all-pickup-section {
@@ -645,3 +667,48 @@ body {
     width: 100%;
     max-width: none;
 }
+
+/* 商品ご購入・ご案内 */
+
+/* 1. ページ全体のパディング調整（上部の余白を狭め、左右に余裕を持たせる） */
+.info-page-section {
+    padding: 30px 20px 40px;
+    /* 上を20pxに狭め、左右に20pxのパディングを確保 */
+}
+
+.info-page-container {
+    padding: 0 10px;
+    /* さらに内側のコンテンツ幅を狭めてスッキリさせる */
+}
+
+/* 2. バナーの文字をしっかり中央に持ってくる */
+
+/* ご案内ページのバナーだけ、左揃えと左パディングをリセットして中央に戻す */
+.info-page-section .info-banner-link .info-banner-text {
+    text-align: center;
+    padding-left: 0;
+    font-size:18px;
+}
+
+.info-banner-wrapper .info-banner-overlay {
+    justify-content: center;
+    /* 横方向の中央揃え */
+    align-items: center;
+    /* 縦方向の中央揃え */
+}
+
+.info-banner-text {
+    text-align: center;
+    /* 文字列自体の中心揃え */
+}
+
+/* faqページ　faq.html */
+
+    /* .faq-page-section {
+        padding: 20px 15px 40px;
+    }
+    
+    .faq-question,
+    .faq-answer {
+        font-size: 13px; 
+    } */
