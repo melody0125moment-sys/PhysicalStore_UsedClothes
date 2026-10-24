@@ -487,6 +487,7 @@ body {
     /* 行間を少し広げて読みやすくする */
     text-align: left;
 }
+
 /* ピックアップ一覧pickup.html */
 /* 1. セクション全体のパディング：上部に固定ヘッダー分の余白を開け、左右に綺麗な余白（20px）を持たせる */
 .all-pickup-section {
@@ -687,7 +688,7 @@ body {
 .info-page-section .info-banner-link .info-banner-text {
     text-align: center;
     padding-left: 0;
-    font-size:18px;
+    font-size: 18px;
 }
 
 .info-banner-wrapper .info-banner-overlay {
@@ -704,7 +705,7 @@ body {
 
 /* faqページ　faq.html */
 
-    /* .faq-page-section {
+/* .faq-page-section {
         padding: 20px 15px 40px;
     }
     

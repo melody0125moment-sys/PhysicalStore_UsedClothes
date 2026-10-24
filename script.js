@@ -55,3 +55,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 });
+
+// ページ遷移時・読み込み完了時に強制的に一番上へスクロールさせる
+window.onload = function() {
+    window.scrollTo(0, 0);
+};
+
+// ブラウザのスクロール位置自動復元機能を無効化する
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+// ページトップへ戻るボタンの動作
+document.addEventListener("DOMContentLoaded", function() {
+    const topBtn = document.querySelector(".page-top-btn");
+    if (topBtn) {
+        topBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+});
