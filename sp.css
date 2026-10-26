@@ -47,7 +47,10 @@ body {
 .global-menu.active {
     right: 0;
 }
-
+/* メニュー開いてるときはページ上部に戻るボタンを表示しない */
+body:has(.global-menu.active) .page-top-btn {
+    display: none !important;
+}
 
 /* ヒーローセクション */
 

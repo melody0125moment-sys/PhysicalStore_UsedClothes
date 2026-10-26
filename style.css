@@ -117,8 +117,9 @@ html, body {
     position: fixed;
     top: 57px;             /* ★ヘッダーの真下から画面下部までを暗くする */
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
-    height: calc(100vh - 70px);
     background-color: rgba(0, 0, 0, 0.6);
     opacity: 0;
     visibility: hidden;
@@ -136,9 +137,9 @@ html, body {
 .global-menu {
     position: fixed;
     top: 57px;             /* ★ヘッダーの高さ（70px）の「真下」からスタートさせる */
-    right: -100%;          /* 最初は画面の右外側に隠す */
+    right: -100%;
+    bottom: 0;          /* 最初は画面の右外側に隠す */
     width: 360px;          /* PCでのメニューの幅（スマホは下で上書き） */
-    height: calc(100vh - 70px); /* 画面の高さからヘッダー分を引いた高さにする */
     background-color: #1a1936;
     padding: 20px 0 40px;
     box-sizing: border-box;
